@@ -49,7 +49,7 @@ export function DefaultLayout() {
                         className="text-gray-600 h-14 flex items-center relative"
                     >
                         <div
-                            className={`flex flex-col items-center px-4 w-[80px] py-2 ${
+                            className={`flex flex-col items-center px-4 w-20 py-2 ${
                                 location.pathname === link.path
                                     ? 'bg-main text-white rounded-3xl'
                                     : 'bg-transparent'
