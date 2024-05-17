@@ -1,13 +1,20 @@
 import { FaBitcoin } from 'react-icons/fa'
 import { useStore } from '../store/store.ts'
 import { motion } from "framer-motion";
+import React, {useEffect, useState, useCallback} from 'react'
+
 export function Exchange() {
     const { count, increment } = useStore();
     const [touchCount, setTouchCount] = useState(0);
     
-    const handleTouchStart = useCallback((event) => {
-        setTouchCount(event.touches.length);
-    }, []);
+    const handleTouchStart = useCallback(
+        (event: React.TouchEvent) => {
+            if (event.touches) {
+                setTouchCount(event.touches.length);
+            }
+        },
+        []
+    );
     
     const handleTouchEnd = useCallback(() => {
         setTouchCount(0);
@@ -21,16 +28,6 @@ export function Exchange() {
         }
     }, [touchCount, increment]);
     
-    useEffect(() => {
-        window.addEventListener('touchstart', handleTouchStart);
-        window.addEventListener('touchend', handleTouchEnd);
-        
-        return () => {
-            window.removeEventListener('touchstart', handleTouchStart);
-            window.removeEventListener('touchend', handleTouchEnd);
-        };
-    }, [handleTouchStart, handleTouchEnd]);
-    
     return (
         <div className="flex flex-row justify-center">
             <div className="flex flex-col mt-20">
@@ -39,12 +36,16 @@ export function Exchange() {
                         <FaBitcoin className="text-active h-20 w-20" />
                     </div>
                     
-                    <div className="text-zinc-200 text-4xl mt-4 transition-all">{count}</div>
+                    <div className="text-zinc-200 text-4xl mt-4 transition-all">
+                        {count}
+                    </div>
                 </div>
                 
                 <motion.div
                     className="w-64 h-64 bg-blue-500 rounded-full relative mt-10"
                     onClick={() => increment()}
+                    onTouchStart={handleTouchStart}
+                    onTouchEnd={handleTouchEnd}
                     whileHover={{ scale: 1.2 }}
                     whileTap={{ scale: 0.9 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -53,5 +54,5 @@ export function Exchange() {
                 </motion.div>
             </div>
         </div>
-    )
+    );
 }
