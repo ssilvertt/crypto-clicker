@@ -41,15 +41,15 @@ export function DefaultLayout() {
             <div className="flex-grow">
                 <Outlet />
             </div>
-
-            <nav className="fixed bottom-10 left-2 right-2 bg-secondary shadow-md flex justify-center py-2 rounded-3xl" >
+            
+            <nav className="fixed bottom-10 left-1 right-1 bg-secondary shadow-md flex justify-around py-2 rounded-3xl sm:flex-row px-1">
                 {links.map((link) => (
                     <Link
                         to={link.path}
-                        className="text-gray-600 h-14 flex items-center relative"
+                        className="text-gray-600 h-14 flex items-center relative flex-1" // Added flex-1 here
                     >
                         <div
-                            className={`flex flex-col items-center px-4 w-20 py-2 ${
+                            className={`flex flex-col items-center px-4 w-full py-2 ${
                                 location.pathname === link.path
                                     ? 'bg-main text-white rounded-3xl'
                                     : 'bg-transparent'
@@ -61,7 +61,7 @@ export function DefaultLayout() {
                                 {link.icon}
                             </div>
                             <span
-                                className={`text-xs ${location.pathname === link.path ? 'text-white' : 'text-inactivefont'}`}
+                                className={`text-xxs ${location.pathname === link.path ? 'text-white' : 'text-inactivefont'}`}
                             >
                                 {link.text}
                             </span>
