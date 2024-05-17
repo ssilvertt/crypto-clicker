@@ -20,6 +20,19 @@ export function Exchange() {
         setTouchCount(0);
     }, []);
     
+    const handleClick = useCallback(
+        (event: React.MouseEvent) => {
+            // Если событие касания уже обработано, игнорируем событие клика
+            if (touchCount > 0) {
+                event.preventDefault();
+                return;
+            }
+            
+            increment();
+        },
+        [increment, touchCount]
+    );
+    
     useEffect(() => {
         if (touchCount > 0) {
             for (let i = 0; i < touchCount; i++) {
@@ -43,7 +56,7 @@ export function Exchange() {
                 
                 <motion.div
                     className="w-64 h-64 bg-blue-500 rounded-full relative mt-10"
-                    onClick={() => increment()}
+                    onClick={handleClick}
                     onTouchStart={handleTouchStart}
                     onTouchEnd={handleTouchEnd}
                     whileHover={{ scale: 1.2 }}
