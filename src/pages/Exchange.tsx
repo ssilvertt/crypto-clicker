@@ -7,10 +7,11 @@ export function Exchange() {
     const { count, increment } = useStore()
     const [clickCount, setClickCount] = useState(0);
     
-    const handleTouchStart = () => {
-        // Increment the click count when the button is touched
-        setClickCount(prevCount => prevCount + 1);
-    };
+    const handleTouchStart = (event: { touches: string }) => {
+        if (event.touches.length === 1) {
+            setClickCount((prevCount) => prevCount + 1)
+        }
+    }
     
     
     const handleTouchEnd = () => {
@@ -34,9 +35,9 @@ export function Exchange() {
                     className="w-64 h-64 bg-blue-500 rounded-full relative mt-10"
                     onTouchStart={handleTouchStart}
                     onTouchEnd={handleTouchEnd}
-                    // whileHover={{ scale: 1.2 }}
-                    // whileTap={{ scale: 0.9 }}
-                    // transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
                     <div className="absolute inset-1 bg-[radial-gradient(169.40%_89.55%_at_94.76%_6.29%,rgba(0,0,0,0.40)_0%,rgba(255,255,255,0.00)_100%)] rounded-full"></div>
                 </motion.div>
