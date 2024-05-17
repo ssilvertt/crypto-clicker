@@ -1,24 +1,24 @@
 import { FaBitcoin } from 'react-icons/fa'
 import { useStore } from '../store/store.ts'
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion'
 import { useState, TouchEvent } from 'react'
 
 export function Exchange() {
     const { count, increment } = useStore()
-    const [clickCount, setClickCount] = useState(0);
-    
+    const [clickCount, setClickCount] = useState(0)
+
     // Update the event type to TouchEvent
     const handleTouchStart = (event: TouchEvent) => {
         if (event.touches.length === 1) {
             setClickCount((prevCount) => prevCount + 1)
         }
     }
-    
+
     const handleTouchEnd = () => {
-        increment(clickCount);
-        setClickCount(0);
-    };
-    
+        increment(clickCount)
+        setClickCount(0)
+    }
+
     return (
         <div className="flex flex-row justify-center">
             <div className="flex flex-col mt-20">
@@ -26,17 +26,19 @@ export function Exchange() {
                     <div>
                         <FaBitcoin className="text-active h-20 w-20" />
                     </div>
-                    
-                    <div className="text-zinc-200 text-4xl mt-4 transition-all">{count}</div>
+
+                    <div className="text-zinc-200 text-4xl mt-4 transition-all">
+                        {count}
+                    </div>
                 </div>
-                
+
                 <motion.div
                     className="w-64 h-64 bg-blue-500 rounded-full relative mt-10"
                     onTouchStart={handleTouchStart}
                     onTouchEnd={handleTouchEnd}
                     whileHover={{ scale: 1.2 }}
                     whileTap={{ scale: 0.9 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 17 }}
                 >
                     <div className="absolute inset-1 bg-[radial-gradient(169.40%_89.55%_at_94.76%_6.29%,rgba(0,0,0,0.40)_0%,rgba(255,255,255,0.00)_100%)] rounded-full"></div>
                 </motion.div>

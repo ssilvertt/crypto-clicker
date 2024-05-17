@@ -8,8 +8,7 @@ interface Clicker {
 
 export const useStore = create<Clicker>()((set) => ({
     count: 0,
-    increment: (value = 1) => set((state) => ({ count: state.count + (value || 1) })),
+    increment: (value = 1) =>
+        set((state) => ({ count: state.count + (value || 1) })),
     reset: () => set({ count: 0 }),
 }))
-
-

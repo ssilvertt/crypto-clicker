@@ -8,14 +8,14 @@ export default {
                 secondary: '#282a2f',
                 active: '#e7ba4d',
                 inactive: '#4e4f50',
-                inactivefont: '#8c8e93'
+                inactivefont: '#8c8e93',
             },
             fontFamily: {
                 mont: ['Montserrat', 'sans-serif'],
             },
-            fontSize:{
-                xxs: '0.625rem'
-            }
+            fontSize: {
+                xxs: '0.625rem',
+            },
         },
     },
     plugins: [],
