@@ -1,24 +1,23 @@
 import { FaBitcoin } from 'react-icons/fa'
 import { useStore } from '../store/store.ts'
 import { motion } from "framer-motion";
-import {useState} from 'react'
+import { useState, TouchEvent } from 'react'
 
 export function Exchange() {
     const { count, increment } = useStore()
     const [clickCount, setClickCount] = useState(0);
     
-    const handleTouchStart = (event: { touches: string }) => {
+    // Update the event type to TouchEvent
+    const handleTouchStart = (event: TouchEvent) => {
         if (event.touches.length === 1) {
             setClickCount((prevCount) => prevCount + 1)
         }
     }
     
-    
     const handleTouchEnd = () => {
         increment(clickCount);
         setClickCount(0);
     };
-    
     
     return (
         <div className="flex flex-row justify-center">
