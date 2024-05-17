@@ -2,8 +2,35 @@ import { FaBitcoin } from 'react-icons/fa'
 import { useStore } from '../store/store.ts'
 import { motion } from "framer-motion";
 export function Exchange() {
-    const { count, increment } = useStore()
-
+    const { count, increment } = useStore();
+    const [touchCount, setTouchCount] = useState(0);
+    
+    const handleTouchStart = useCallback((event) => {
+        setTouchCount(event.touches.length);
+    }, []);
+    
+    const handleTouchEnd = useCallback(() => {
+        setTouchCount(0);
+    }, []);
+    
+    useEffect(() => {
+        if (touchCount > 0) {
+            for (let i = 0; i < touchCount; i++) {
+                increment();
+            }
+        }
+    }, [touchCount, increment]);
+    
+    useEffect(() => {
+        window.addEventListener('touchstart', handleTouchStart);
+        window.addEventListener('touchend', handleTouchEnd);
+        
+        return () => {
+            window.removeEventListener('touchstart', handleTouchStart);
+            window.removeEventListener('touchend', handleTouchEnd);
+        };
+    }, [handleTouchStart, handleTouchEnd]);
+    
     return (
         <div className="flex flex-row justify-center">
             <div className="flex flex-col mt-20">
@@ -11,10 +38,10 @@ export function Exchange() {
                     <div>
                         <FaBitcoin className="text-active h-20 w-20" />
                     </div>
-
+                    
                     <div className="text-zinc-200 text-4xl mt-4 transition-all">{count}</div>
                 </div>
-
+                
                 <motion.div
                     className="w-64 h-64 bg-blue-500 rounded-full relative mt-10"
                     onClick={() => increment()}
