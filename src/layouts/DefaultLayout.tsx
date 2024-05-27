@@ -31,9 +31,9 @@ export function DefaultLayout() {
         <WebAppProvider>
         
         <MobileView>
-            <div>
-                {initData}
-                {initDataUnsafe ? initDataUnsafe.toString() : 'no data'}
+            <div className='text-white'>
+                {JSON.stringify(initData)}
+                {initDataUnsafe ? JSON.stringify(initDataUnsafe) : 'no data'}
             </div>
             <div className="min-h-screen bg-main flex flex-col font-mont">
                 <div className="flex-grow">
