@@ -6,7 +6,7 @@ interface Clicker {
     reset: () => void
 }
 
-export const useStore = create<Clicker>()((set) => ({
+export const useClickerStore = create<Clicker>()((set) => ({
     count: 0,
     increment: (value = 1) =>
         set((state) => ({ count: state.count + (value || 1) })),

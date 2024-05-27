@@ -1,10 +1,10 @@
 import { FaBitcoin } from 'react-icons/fa'
-import { useStore } from '../store/store.ts'
+import { useClickerStore } from '../store/clicker-store.ts'
 import { motion } from 'framer-motion'
 import { useState, TouchEvent } from 'react'
 
 export function Exchange() {
-    const { count, increment } = useStore()
+    const { count, increment } = useClickerStore()
     const [clickCount, setClickCount] = useState(0)
 
 

@@ -3,10 +3,7 @@ import { SiBinance } from 'react-icons/si'
 import { FaBitcoin } from 'react-icons/fa'
 import { Outlet, useLocation } from 'react-router-dom'
 import { NavLink } from '../components/NavLink.tsx'
-import {
-    BrowserView,
-    MobileView,
-} from 'react-device-detect'
+import { BrowserView, MobileView } from 'react-device-detect'
 
 const links = [
     {
@@ -24,16 +21,27 @@ const links = [
 
 export function DefaultLayout() {
     const location = useLocation()
-    const [initDataUnsafe, initData] = useInitData();
-    
+    const [initDataUnsafe, initData] = useInitData()
 
     return (
         <WebAppProvider>
-        
-        <MobileView>
-            <div className='text-white'>
-                {JSON.stringify(initData)}
-                {initDataUnsafe ? JSON.stringify(initDataUnsafe) : 'no data'}
+            {/* <MobileView> */}
+            <div className="text-white">
+                <span className="text-red-700">{initData}</span>
+                <span className="text-pink-600">
+                    {JSON.stringify(initData)}
+                </span>
+                <span className="text-blue-600">
+                    {initData ? JSON.parse(initData) : 'no init'}
+                </span>
+                <span className="text-yellow-400">
+                    {initDataUnsafe && 'no data'}
+                </span>
+                <span className="text-green-600">
+                    {initDataUnsafe
+                        ? JSON.stringify(initDataUnsafe)
+                        : 'no data'}
+                </span>
             </div>
             <div className="min-h-screen bg-main flex flex-col font-mont">
                 <div className="flex-grow">
@@ -52,10 +60,10 @@ export function DefaultLayout() {
                     ))}
                 </nav>
             </div>
-        </MobileView>
-            <BrowserView>
-                <div>Error, please use mobile device</div>
-            </BrowserView>
+            {/* </MobileView> */}
+            {/* <BrowserView> */}
+            {/*     <div>Error, please use mobile device</div> */}
+            {/* </BrowserView> */}
         </WebAppProvider>
     )
 }
