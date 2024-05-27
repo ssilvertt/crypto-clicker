@@ -37,9 +37,7 @@ export function DefaultLayout() {
                     {initDataUnsafe && 'no data'}
                 </span>
                 <span className="text-green-600">
-                    {initDataUnsafe
-                        ? JSON.stringify(initDataUnsafe)
-                        : 'no data'}
+                    {initDataUnsafe && 'null'}
                 </span>
             </div>
             <div className="min-h-screen bg-main flex flex-col font-mont">
