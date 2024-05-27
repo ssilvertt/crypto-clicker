@@ -1,3 +1,4 @@
+import { WebAppProvider, useInitData } from '@vkruglikov/react-telegram-web-app'
 import { SiBinance } from 'react-icons/si'
 import { FaBitcoin } from 'react-icons/fa'
 import { Outlet, useLocation } from 'react-router-dom'
@@ -23,11 +24,17 @@ const links = [
 
 export function DefaultLayout() {
     const location = useLocation()
+    const [initDataUnsafe, initData] = useInitData();
+    
 
     return (
-        <>
+        <WebAppProvider>
         
         <MobileView>
+            <div>
+                {initData}
+                {initDataUnsafe ? initDataUnsafe.toString() : null}
+            </div>
             <div className="min-h-screen bg-main flex flex-col font-mont">
                 <div className="flex-grow">
                     <Outlet />
@@ -49,6 +56,6 @@ export function DefaultLayout() {
             <BrowserView>
                 <div>Error, please use mobile device</div>
             </BrowserView>
-        </>
+        </WebAppProvider>
     )
 }
