@@ -33,7 +33,7 @@ export function DefaultLayout() {
         <MobileView>
             <div>
                 {initData}
-                {initDataUnsafe ? initDataUnsafe.toString() : null}
+                {initDataUnsafe ? initDataUnsafe.toString() : 'no data'}
             </div>
             <div className="min-h-screen bg-main flex flex-col font-mont">
                 <div className="flex-grow">
