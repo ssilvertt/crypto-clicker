@@ -3,7 +3,6 @@ import { SiBinance } from 'react-icons/si'
 import { FaBitcoin } from 'react-icons/fa'
 import { Outlet, useLocation } from 'react-router-dom'
 import { NavLink } from '../components/NavLink.tsx'
-import { BrowserView, MobileView } from 'react-device-detect'
 
 const links = [
     {
