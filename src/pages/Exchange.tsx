@@ -7,7 +7,7 @@ export function Exchange() {
     const { count, increment } = useStore()
     const [clickCount, setClickCount] = useState(0)
 
-    // Update the event type to TouchEvent
+
     const handleTouchStart = (event: TouchEvent) => {
         if (event.touches.length === 1) {
             setClickCount((prevCount) => prevCount + 1)
