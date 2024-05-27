@@ -4,6 +4,7 @@ import { FaBitcoin } from 'react-icons/fa'
 import { Outlet, useLocation } from 'react-router-dom'
 import { NavLink } from '../components/NavLink.tsx'
 
+
 const links = [
     {
         icon: <SiBinance className="h-8 w-8" />,
@@ -30,14 +31,13 @@ export function DefaultLayout() {
                 <span className="text-pink-600">
                     {JSON.stringify(initData)}
                 </span>
-                <span className="text-blue-600">
-                    {initData ? JSON.parse(initData) : 'no init'}
-                </span>
                 <span className="text-yellow-400">
                     {initDataUnsafe && 'no data'}
                 </span>
                 <span className="text-green-600">
-                    {initDataUnsafe && 'null'}
+                    {initDataUnsafe
+                        ? JSON.stringify(initDataUnsafe)
+                        : 'no data'}
                 </span>
             </div>
             <div className="min-h-screen bg-main flex flex-col font-mont">
