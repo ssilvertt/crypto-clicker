@@ -42,7 +42,7 @@ export function DefaultLayout() {
             {/* <MobileView> */}
             <div className="text-white">
                 {initInfo ? (
-                    <div>{JSON.stringify(initInfo)}</div>
+                    <div>{initInfo}</div>
                 ) : (
                     <div>Loading...</div>
                 )}
