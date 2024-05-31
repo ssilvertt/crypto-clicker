@@ -1,9 +1,9 @@
-import { create } from 'zustand'
+import { create } from 'zustand';
 
 interface Clicker {
-    count: number
-    increment: (value?: number) => void
-    reset: () => void
+    count: number;
+    increment: (value?: number) => void;
+    reset: () => void;
 }
 
 export const useClickerStore = create<Clicker>()((set) => ({
@@ -11,4 +11,4 @@ export const useClickerStore = create<Clicker>()((set) => ({
     increment: (value = 1) =>
         set((state) => ({ count: state.count + (value || 1) })),
     reset: () => set({ count: 0 }),
-}))
+}));

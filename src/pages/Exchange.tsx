@@ -1,23 +1,22 @@
-import { FaBitcoin } from 'react-icons/fa'
-import { useClickerStore } from '../store/clicker-store.ts'
-import { motion } from 'framer-motion'
-import { useState, TouchEvent } from 'react'
+import { FaBitcoin } from 'react-icons/fa';
+import { useClickerStore } from '../store/clicker-store.ts';
+import { motion } from 'framer-motion';
+import { useState, TouchEvent } from 'react';
 
 export function Exchange() {
-    const { count, increment } = useClickerStore()
-    const [clickCount, setClickCount] = useState(0)
-
+    const { count, increment } = useClickerStore();
+    const [clickCount, setClickCount] = useState(0);
 
     const handleTouchStart = (event: TouchEvent) => {
         if (event.touches.length === 1) {
-            setClickCount((prevCount) => prevCount + 1)
+            setClickCount((prevCount) => prevCount + 1);
         }
-    }
+    };
 
     const handleTouchEnd = () => {
-        increment(clickCount)
-        setClickCount(0)
-    }
+        increment(clickCount);
+        setClickCount(0);
+    };
 
     return (
         <div className="flex flex-row justify-center">
@@ -44,5 +43,5 @@ export function Exchange() {
                 </motion.div>
             </div>
         </div>
-    )
+    );
 }

@@ -1,11 +1,11 @@
-import type { ReactNode } from 'react'
-import { Link } from 'react-router-dom'
+import type { ReactNode } from 'react';
+import { Link } from 'react-router-dom';
 
 interface NavLinkProps {
-    icon: ReactNode
-    text: string
-    path: string
-    isActive: boolean
+    icon: ReactNode;
+    text: string;
+    path: string;
+    isActive: boolean;
 }
 
 export function NavLink({ icon, text, path, isActive }: NavLinkProps) {
@@ -29,5 +29,5 @@ export function NavLink({ icon, text, path, isActive }: NavLinkProps) {
                 </span>
             </div>
         </Link>
-    )
+    );
 }
