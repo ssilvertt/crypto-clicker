@@ -42,8 +42,8 @@ export function DefaultLayout() {
             {/* <MobileView> */}
             <div className="text-white">
                 {
-                    initInfo.user
-                     ? <div>{initInfo.user.first_name}</div>
+                    initInfo
+                     ? <div>{JSON.stringify(initInfo)}</div>
                         : <div>Loading...</div>
                 }
             </div>
