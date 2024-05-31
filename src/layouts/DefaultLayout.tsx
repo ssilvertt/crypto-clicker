@@ -2,7 +2,7 @@ import {
     WebAppProvider,
     useInitData,
 } from '@vkruglikov/react-telegram-web-app';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { SiBinance } from 'react-icons/si';
 import { FaBitcoin } from 'react-icons/fa';
 import { Outlet, useLocation } from 'react-router-dom';
@@ -26,16 +26,16 @@ const links = [
 
 export function DefaultLayout() {
     const location = useLocation();
-    const [, initData] = useInitData();
+    const [initDataUnsafe, initData] = useInitData();
     const { initInfo, setInitInfo } = useUserData();
-
+    const [user, setUser] = useState(null);
     useEffect(() => {
         if (initData) {
             const parseUser = parseQueryString(initData);
-            
+            setUser(user);
             setInitInfo(parseUser);
         }
-    }, [initData, setInitInfo]);
+    }, [initData, setInitInfo, setUser, user]);
 
     return (
         <WebAppProvider>
@@ -45,7 +45,17 @@ export function DefaultLayout() {
                     initInfo
                      ? <div>{JSON.stringify(initInfo)}</div>
                         : <div>Loading...</div>
+                    
+                    
                 }
+                <span className='text-red-500'>
+                    {
+                        user
+                        ? <div>{JSON.stringify(user)}</div>
+                            : <div>Xdxd</div>
+                        
+                    }
+                </span>
             </div>
             <div className="min-h-screen bg-main flex flex-col font-mont">
                 <div className="flex-grow">
