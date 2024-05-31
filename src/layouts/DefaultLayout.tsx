@@ -26,7 +26,7 @@ const links = [
 
 export function DefaultLayout() {
     const location = useLocation();
-    const [initDataUnsafe, initData] = useInitData();
+    const [, initData] = useInitData();
     const { initInfo, setInitInfo } = useUserData();
     const [user, setUser] = useState(null);
     useEffect(() => {
