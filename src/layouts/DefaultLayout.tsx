@@ -41,13 +41,15 @@ export function DefaultLayout() {
         <WebAppProvider>
             {/* <MobileView> */}
             <div className="text-red-500">{initData}</div>
+            <div className="text-red-500">{JSON.stringify(initData)}</div>
             <div className="text-blue-500">{JSON.stringify(initInfo)}</div>
             <div className="min-h-screen bg-main flex flex-col font-mont">
                 <div className="flex-grow">
                     <Outlet />
                 </div>
-
-                <nav className="fixed bottom-10 left-1 right-1 bg-secondary shadow-md flex justify-around py-2 rounded-3xl sm:flex-row px-1">
+                
+                <nav
+                    className="fixed bottom-10 left-1 right-1 bg-secondary shadow-md flex justify-around py-2 rounded-3xl sm:flex-row px-1">
                     {links.map((link) => (
                         <NavLink
                             key={link.path}
