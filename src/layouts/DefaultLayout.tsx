@@ -40,14 +40,8 @@ export function DefaultLayout() {
     return (
         <WebAppProvider>
             {/* <MobileView> */}
-            <div className="text-white">
-                {initInfo ? (
-                    <div>{initInfo}</div>
-                ) : (
-                    <div>Loading...</div>
-                )}
-               
-            </div>
+            <div className="text-red-500">{initData}</div>
+            <div className="text-blue-500">{JSON.stringify(initInfo)}</div>
             <div className="min-h-screen bg-main flex flex-col font-mont">
                 <div className="flex-grow">
                     <Outlet />
