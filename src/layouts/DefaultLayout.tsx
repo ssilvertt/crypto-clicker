@@ -41,20 +41,16 @@ export function DefaultLayout() {
         <WebAppProvider>
             {/* <MobileView> */}
             <div className="text-white">
-                {
-                    initInfo
-                     ? <div>{JSON.stringify(initInfo)}</div>
-                        : <div>Loading...</div>
-                    
-                    
-                }
-                <span className='text-red-500'>
-                    {
-                        user
-                        ? <div>{JSON.stringify(user)}</div>
-                            : <div>Xdxd</div>
-                        
-                    }
+                {initInfo ? (
+                    <div>{JSON.stringify(initInfo)}</div>
+                ) : (
+                    <div>Loading...</div>
+                )}
+                <span className="text-red-500">
+                    {user ? <div>{JSON.stringify(user)}</div> : <div>Xdxd</div>}
+                </span>
+                <span className="text-fuchsia-500-500">
+                    {initData ? <div>{JSON.stringify(initData)}</div> : <div>Xdxd2</div>}
                 </span>
             </div>
             <div className="min-h-screen bg-main flex flex-col font-mont">
