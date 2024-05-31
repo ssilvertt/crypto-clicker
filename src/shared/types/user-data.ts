@@ -1,8 +1,8 @@
 export interface InitData {
-    query_id: string;
-    user: User;
-    auth_date: number;
-    hash: string;
+    query_id?: string;
+    user?: User;
+    auth_date?: number;
+    hash?: string;
 }
 
 export interface User {
