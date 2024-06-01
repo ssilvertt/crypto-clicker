@@ -26,7 +26,7 @@ const links = [
 export function DefaultLayout() {
     const location = useLocation();
     const [, initData] = useInitData();
-    const { user, setUser } = useUserStore();
+    const { setUser } = useUserStore();
     
     
     useEffect(() => {
@@ -41,9 +41,6 @@ export function DefaultLayout() {
     return (
         <WebAppProvider>
             {/* <MobileView> */}
-            <div className='text-red-500'>
-                {JSON.stringify(user)}
-            </div>
             <div className="min-h-screen bg-main flex flex-col font-mont">
                 <div className="flex-grow">
                     <Outlet />
