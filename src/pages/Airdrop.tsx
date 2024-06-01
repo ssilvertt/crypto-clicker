@@ -1,8 +1,8 @@
-import { useUserData } from '../store/user-store.ts';
+import { useUserStore } from '../store/user-store.ts';
 
 
 export function Airdrop() {
-    const { initInfo } = useUserData();
+    const { user } = useUserStore();
     
     
     return (
@@ -11,7 +11,7 @@ export function Airdrop() {
         
         <>
             <div className="text-zinc-200">{
-                JSON.stringify(initInfo.user)
+                JSON.stringify(user)
             }</div>
         </>
     );
