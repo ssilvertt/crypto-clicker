@@ -1,25 +1,14 @@
-import {create} from 'zustand'
-import {InitData} from '../shared/types/user-data.ts';
+import { create } from 'zustand';
+import type { User } from '../shared/types/user-data.ts';
 
-
-interface InitInfo {
-    initInfo: InitData;
-    setInitInfo: (initData: InitData) => void;
+interface UserStore {
+    user: User | null;
+    setUser: (user: User | null) => void;
 }
 
-export const useUserData = create<InitInfo>(() => ({
-    initInfo: {
-        query_id: '',
-        user: {
-            id: 0,
-            first_name: '',
-            last_name: '',
-            username: '',
-            language_code: '',
-            allows_write_to_pm: false,
-        },
-        auth_date: 0,
-        hash: '',
-    },
-    setInitInfo: (initData: InitData) => ({ initData }),
-}))
+export const useUserStore = create<UserStore>((set) => ({
+    user: null,
+    setUser: (user: User | null) => set({ user }),
+}));
+
+export default useUserStore;
