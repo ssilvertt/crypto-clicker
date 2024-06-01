@@ -2,7 +2,7 @@ import {
     WebAppProvider,
     useInitData,
 } from '@vkruglikov/react-telegram-web-app';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { SiBinance } from 'react-icons/si';
 import { FaBitcoin } from 'react-icons/fa';
 import { Outlet, useLocation } from 'react-router-dom';
