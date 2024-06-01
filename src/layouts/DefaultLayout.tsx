@@ -7,8 +7,7 @@ import { SiBinance } from 'react-icons/si';
 import { FaBitcoin } from 'react-icons/fa';
 import { Outlet, useLocation } from 'react-router-dom';
 import { NavLink } from '../components/NavLink.tsx';
-import { parseQueryString } from '../utils/parseQueryString.ts';
-import { useUserData } from '../store/user-store.ts';
+import {useUserStore } from '../store/user-store.ts';
 
 const links = [
     {
@@ -27,22 +26,24 @@ const links = [
 export function DefaultLayout() {
     const location = useLocation();
     const [, initData] = useInitData();
-    const { initInfo, setInitInfo } = useUserData();
-    const [user, setUser] = useState(null);
+    const { user, setUser } = useUserStore();
+    
+    
     useEffect(() => {
-        if (initData) {
-            const parseUser = parseQueryString(initData);
+        if(initData){
+            const searchParams = new URLSearchParams(initData);
+            const value = searchParams.get('user');
+            const user = value !== null ? JSON.parse(value) : null;
             setUser(user);
-            setInitInfo(parseUser);
         }
-    }, [initData, setInitInfo, setUser, user]);
+    }, [initData, setUser]);
 
     return (
         <WebAppProvider>
             {/* <MobileView> */}
-            <div className="text-red-500">{initData}</div>
-            <div className="text-red-500">{JSON.stringify(initData)}</div>
-            <div className="text-blue-500">{JSON.stringify(initInfo)}</div>
+            <div className='text-red-500'>
+                {JSON.stringify(user)}
+            </div>
             <div className="min-h-screen bg-main flex flex-col font-mont">
                 <div className="flex-grow">
                     <Outlet />
