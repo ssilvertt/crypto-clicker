@@ -9,6 +9,7 @@ import { FaBitcoin } from 'react-icons/fa';
 import { Outlet, useLocation } from 'react-router-dom';
 import { NavLink } from '../components/NavLink.tsx';
 import {useUserStore } from '../store/user-store.ts';
+import { MobileView, BrowserView } from 'react-device-detect';
 
 const links = [
     {
@@ -47,7 +48,7 @@ export function DefaultLayout() {
 
     return (
         <WebAppProvider>
-            {/* <MobileView> */}
+            <MobileView>
             <div className="min-h-screen bg-main flex flex-col font-space">
                 <div className="flex-grow">
                     <Outlet />
@@ -66,10 +67,10 @@ export function DefaultLayout() {
                     ))}
                 </nav>
             </div>
-            {/* </MobileView> */}
-            {/* <BrowserView> */}
-            {/*     <div>Error, please use mobile device</div> */}
-            {/* </BrowserView> */}
+             </MobileView>
+             <BrowserView>
+              <div>Error, please use mobile device</div>
+            </BrowserView>
         </WebAppProvider>
     );
 }

@@ -72,7 +72,8 @@ export function Exchange() {
             </div>
             
             <div className='mx-auto mt-4 flex'>
-                <p className='font-bold text-balance'>${count}</p>
+                <span className='font-bold text-balance'>$</span>
+                <span className='font-bold text-balance'>{count}</span>
             </div>
         </div>
     );
