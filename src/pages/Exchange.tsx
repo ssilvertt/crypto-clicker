@@ -44,7 +44,7 @@ export function Exchange() {
                     Choose Exchange
                 </button>
             </div>
-            <div className='flex flex-col justify-center items-center mt-2 mr-4'>
+            <div className='flex flex-col justify-center items-center mt-6 mr-4'>
                 <div className="flex flex-row justify-center space-x-5">
                     <Stat
                         text={'Earnings per click'}
@@ -56,7 +56,7 @@ export function Exchange() {
             </div>
             
             <motion.div
-                className=" mx-auto rounded-full relative mt-2"
+                className=" mx-auto rounded-full relative mt-4"
                 onTouchStart={handleTouchStart}
                 onTouchEnd={handleTouchEnd}
                 whileHover={{ scale: 1.2 }}
