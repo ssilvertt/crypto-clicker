@@ -1,7 +1,8 @@
-import { FaBitcoin } from 'react-icons/fa';
 import { useClickerStore } from '../store/clicker-store.ts';
 import { motion } from 'framer-motion';
 import { useState, TouchEvent } from 'react';
+
+import { Stat } from '../components/Stat.tsx';
 
 export function Exchange() {
     const { count, increment } = useClickerStore();
@@ -19,28 +20,59 @@ export function Exchange() {
     };
 
     return (
-        <div className="flex flex-row justify-center">
-            <div className="flex flex-col mt-20">
-                <div className="grid grid-cols-2 justify-items-center ">
-                    <div>
-                        <FaBitcoin className="text-active h-20 w-20" />
-                    </div>
-
-                    <div className="text-zinc-200 text-4xl mt-4 transition-all">
-                        {count}
+        <div className="flex flex-col text-white">
+            <div className="flex flex-col mt-4 mx-4">
+                <div className="flex flex-row space-x-4">
+                    <img
+                        src="/alch.jpg"
+                        alt="alch"
+                        className="w-20 h-20 rounded-full"
+                    />
+                    <div className="flex flex-col">
+                        <p className="text-name font-bold tracking-name">
+                            Silvert
+                        </p>
+                        <p className="text-level tracking-normal font-normal text-muted">
+                            Laser master
+                        </p>
+                        <p className="text-level tracking-normal font-normal text-muted">
+                            Level 4
+                        </p>
                     </div>
                 </div>
+                <button className="bg-secondary rounded-[20px] h-10 font-bold text-button mt-4">
+                    Choose Exchange
+                </button>
+            </div>
+            <div className='flex flex-col justify-start items-start mt-2'>
+                <div className="flex flex-row justify-start p-1 items-start" >
+                    <Stat
+                        text={'Earnings per click'}
+                        value={'+1'}
+                    />
+                    <Stat text={'Coins to Level Up'} value={'50K'} />
+                    <Stat text={'Coins for Hour'} value={'100K'} />
+                </div>
+            </div>
 
-                <motion.div
-                    className="w-64 h-64 bg-blue-500 rounded-full relative mt-10"
-                    onTouchStart={handleTouchStart}
-                    onTouchEnd={handleTouchEnd}
-                    whileHover={{ scale: 1.2 }}
-                    whileTap={{ scale: 0.9 }}
-                    transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-                >
-                    <div className="absolute inset-1 bg-[radial-gradient(169.40%_89.55%_at_94.76%_6.29%,rgba(0,0,0,0.40)_0%,rgba(255,255,255,0.00)_100%)] rounded-full"></div>
-                </motion.div>
+            <motion.div
+                className=" mx-auto rounded-full relative mt-2"
+                onTouchStart={handleTouchStart}
+                onTouchEnd={handleTouchEnd}
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+            >
+                <img src={'/button.png'} alt={'button'} />
+            </motion.div>
+            
+            
+            <div className='mx-auto mt-4'>
+                <img src={'/coin.png'} alt={'coin'} className='w-20 h-20'/>
+            </div>
+            
+            <div className='mx-auto mt-4 flex'>
+                <p className='font-bold text-balance'>${count}</p>
             </div>
         </div>
     );

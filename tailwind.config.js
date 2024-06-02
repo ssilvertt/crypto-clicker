@@ -4,18 +4,28 @@ export default {
     theme: {
         extend: {
             colors: {
-                main: '#1e1f25',
-                secondary: '#282a2f',
+                main: '#120f24',
+                secondary: '#26214a',
                 active: '#e7ba4d',
-                inactive: '#4e4f50',
-                inactivefont: '#8c8e93',
+                nav: '#1c1736',
+                muted: '#968FCC',
+                
             },
             fontFamily: {
-                mont: ['Montserrat', 'sans-serif'],
+                space: ['Space Grotesk', 'sans-serif'],
             },
             fontSize: {
-                xxs: '0.625rem',
+                name: ['22px', '27.5px'],
+                level: ['16px', '24px'],
+                button: ['14px', '21px'],
+                stats: ['11px', '21px'],
+                statsnum: ['16px', '21px'],
+                balance: ['48px', '27.5px']
             },
+            letterSpacing: {
+                name: '-0.33px',
+                stats: '0.21px',
+            }
         },
     },
     plugins: [],
