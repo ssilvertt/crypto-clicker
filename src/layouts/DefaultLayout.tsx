@@ -1,6 +1,7 @@
 import {
     WebAppProvider,
     useInitData,
+    useExpand
 } from '@vkruglikov/react-telegram-web-app';
 import { useEffect } from 'react';
 import { SiBinance } from 'react-icons/si';
@@ -26,8 +27,14 @@ const links = [
 export function DefaultLayout() {
     const location = useLocation();
     const [, initData] = useInitData();
+    const [isExpanded, expand] = useExpand();
     const { setUser } = useUserStore();
     
+    useEffect(() => {
+        if (!isExpanded) {
+            expand();
+        }
+    }, [expand, isExpanded]);
     
     useEffect(() => {
         if(initData){
