@@ -24,7 +24,7 @@ export function Exchange() {
             <div className="flex flex-col mt-4 mx-4">
                 <div className="flex flex-row space-x-4">
                     <img
-                        src="/alch.jpg"
+                        src="/samantha.png"
                         alt="alch"
                         className="w-20 h-20 rounded-full"
                     />
@@ -44,8 +44,8 @@ export function Exchange() {
                     Choose Exchange
                 </button>
             </div>
-            <div className='flex flex-col justify-start items-start mt-2'>
-                <div className="flex flex-row justify-start p-1 items-start" >
+            <div className='flex flex-col justify-center items-center mt-2 mr-4'>
+                <div className="flex flex-row justify-center space-x-5">
                     <Stat
                         text={'Earnings per click'}
                         value={'+1'}
@@ -54,7 +54,7 @@ export function Exchange() {
                     <Stat text={'Coins for Hour'} value={'100K'} />
                 </div>
             </div>
-
+            
             <motion.div
                 className=" mx-auto rounded-full relative mt-2"
                 onTouchStart={handleTouchStart}
@@ -68,7 +68,7 @@ export function Exchange() {
             
             
             <div className='mx-auto mt-4'>
-                <img src={'/coin.png'} alt={'coin'} className='w-20 h-20'/>
+                <img src={'/coin.png'} alt={'coin'} className='w-20 h-20' />
             </div>
             
             <div className='mx-auto mt-4 flex'>
