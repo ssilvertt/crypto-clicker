@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { DefaultLayout } from './layouts/DefaultLayout.tsx';
-import { Airdrop } from './pages/Airdrop.tsx';
+import { Mine } from './pages/Mine.tsx';
 import { Exchange } from './pages/Exchange.tsx';
 export const router = createBrowserRouter([
     {
@@ -13,8 +13,8 @@ export const router = createBrowserRouter([
             },
 
             {
-                path: '/airdrop',
-                element: <Airdrop />,
+                path: '/mine',
+                element: <Mine />,
             },
         ],
     },

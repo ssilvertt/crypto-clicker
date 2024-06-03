@@ -4,8 +4,6 @@ import {
     useExpand
 } from '@vkruglikov/react-telegram-web-app';
 import { useEffect } from 'react';
-import { SiBinance } from 'react-icons/si';
-import { FaBitcoin } from 'react-icons/fa';
 import { Outlet, useLocation } from 'react-router-dom';
 import { NavLink } from '../components/NavLink.tsx';
 import {useUserStore } from '../store/user-store.ts';
@@ -13,15 +11,15 @@ import { MobileView, BrowserView } from 'react-device-detect';
 
 const links = [
     {
-        icon: <SiBinance className="h-8 w-8" />,
+        icon: <img src='/Exchange.svg' alt='Exchange' className='h-6 w-6' />,
         text: 'Exchange',
         path: '/',
     },
 
     {
-        icon: <FaBitcoin className="h-8 w-8" />,
-        text: 'Airdrop',
-        path: '/airdrop',
+        icon: <img src='/Mine.svg' alt='Mine' className='h-6 w-6' />,
+        text: 'Mine',
+        path: '/mine',
     },
 ];
 
