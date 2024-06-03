@@ -1,3 +1,5 @@
+import { BottomButton } from '../components/BottomButton.tsx';
+import { ProgressBar } from '../components/ProgressBar.tsx';
 import { useClickerStore } from '../store/clicker-store.ts';
 import { motion } from 'framer-motion';
 import { useState, TouchEvent } from 'react';
@@ -44,12 +46,9 @@ export function Exchange() {
                     Choose Exchange
                 </button>
             </div>
-            <div className='flex flex-col justify-center items-center mt-6 mr-4'>
+            <div className="flex flex-col justify-center items-center mt-6 mr-4">
                 <div className="flex flex-row justify-center space-x-5">
-                    <Stat
-                        text={'Earnings per click'}
-                        value={'+1'}
-                    />
+                    <Stat text={'Earnings per click'} value={'+1'} />
                     <Stat text={'Coins to Level Up'} value={'50K'} />
                     <Stat text={'Coins for Hour'} value={'100K'} />
                 </div>
@@ -63,18 +62,33 @@ export function Exchange() {
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 17 }}
             >
-                <img src={'/buttons.svg'} alt={'button'} className='w-[168px] h-[160px]' />
+                <img
+                    src={'/buttons.svg'}
+                    alt={'button'}
+                    className="w-[168px] h-[160px]"
+                />
             </motion.div>
             
-            
-            <div className='mx-auto mt-4'>
-                <img src={'/coin.png'} alt={'coin'} className='w-14 h-14' />
+            <div className="mx-auto mt-4">
+                <img src={'/coin.png'} alt={'coin'} className="w-14 h-14" />
             </div>
             
-            <div className='mx-auto mt-4 flex'>
-                <span className='font-bold text-balance'>$</span>
-                <span className='font-bold text-balance'>{count}</span>
+            <div className="mx-auto mt-4 flex">
+                <span className="font-bold text-balance">$</span>
+                <span className="font-bold text-balance">{count}</span>
             </div>
+            
+            <div className="flex justify-between items-center px-4 py-2 mt-8">
+                <BottomButton text={'Upgrd'} />
+                
+                <BottomButton text={'Boost'} />
+            </div>
+            <div className='flex flex-col mt-8 mx-4 space-y-3'>
+                <p className='text-level tracking-normal'>lvl 1</p>
+                <ProgressBar progress={25} />
+                <p className='text-level tracking-normal text-muted'>lvl 200</p>
+            </div>
+        
         </div>
     );
 }
