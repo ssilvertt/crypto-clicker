@@ -9,10 +9,13 @@ export default {
                 active: '#e7ba4d',
                 nav: '#1c1736',
                 muted: '#968FCC',
+                boost: '#7561FA',
+                progress: '#382E6B'
                 
             },
             fontFamily: {
                 space: ['Space Grotesk', 'sans-serif'],
+                jakarta: ['Plus Jakarta Sans', 'sans-serif'],
             },
             fontSize: {
                 name: ['22px', '27.5px'],
