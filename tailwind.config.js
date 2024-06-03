@@ -20,7 +20,7 @@ export default {
                 button: ['14px', '21px'],
                 stats: ['11px', '21px'],
                 statsnum: ['16px', '21px'],
-                balance: ['48px', '27.5px']
+                balance: ['32px', '18.33px']
             },
             letterSpacing: {
                 name: '-0.33px',

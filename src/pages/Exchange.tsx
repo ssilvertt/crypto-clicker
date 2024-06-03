@@ -63,12 +63,12 @@ export function Exchange() {
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 17 }}
             >
-                <img src={'/button.png'} alt={'button'} />
+                <img src={'/buttons.svg'} alt={'button'} className='w-[168px] h-[160px]' />
             </motion.div>
             
             
             <div className='mx-auto mt-4'>
-                <img src={'/coin.png'} alt={'coin'} className='w-20 h-20' />
+                <img src={'/coin.png'} alt={'coin'} className='w-14 h-14' />
             </div>
             
             <div className='mx-auto mt-4 flex'>
