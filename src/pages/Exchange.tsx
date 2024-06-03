@@ -42,11 +42,11 @@ export function Exchange() {
                         </p>
                     </div>
                 </div>
-                <button className="bg-secondary rounded-[20px] h-10 font-bold text-button mt-4">
+                <button className="bg-secondary rounded-[20px] h-10 font-bold text-button mt-2">
                     Choose Exchange
                 </button>
             </div>
-            <div className="flex flex-col justify-center items-center mt-6 mr-4">
+            <div className="flex flex-col justify-center items-center mt-4 mr-4">
                 <div className="flex flex-row justify-center space-x-5">
                     <Stat text={'Earnings per click'} value={'+1'} />
                     <Stat text={'Coins to Level Up'} value={'50K'} />
@@ -69,7 +69,7 @@ export function Exchange() {
                 />
             </motion.div>
             
-            <div className="mx-auto mt-4">
+            <div className="mx-auto mt-2">
                 <img src={'/coin.png'} alt={'coin'} className="w-14 h-14" />
             </div>
             
@@ -78,12 +78,12 @@ export function Exchange() {
                 <span className="font-bold text-balance">{count}</span>
             </div>
             
-            <div className="flex justify-between items-center px-4 py-2 mt-8">
+            <div className="flex justify-between items-center px-4 py-2 mt-4">
                 <BottomButton text={'Upgrd'} />
                 
                 <BottomButton text={'Boost'} />
             </div>
-            <div className='flex flex-col mt-8 mx-4 space-y-3'>
+            <div className='flex flex-col mt-4 mx-4 space-y-3'>
                 <p className='text-level tracking-normal'>lvl 1</p>
                 <ProgressBar progress={25} />
                 <p className='text-level tracking-normal text-muted'>lvl 200</p>
