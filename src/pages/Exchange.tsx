@@ -46,7 +46,7 @@ export function Exchange() {
                     Choose Exchange
                 </button>
             </div>
-            <div className="flex flex-col justify-center items-center mt-4 mr-4">
+            <div className="flex flex-col justify-center items-center mt-2 mr-4">
                 <div className="flex flex-row justify-center space-x-5">
                     <Stat text={'Earnings per click'} value={'+1'} />
                     <Stat text={'Coins to Level Up'} value={'50K'} />
@@ -78,7 +78,7 @@ export function Exchange() {
                 <span className="font-bold text-balance">{count}</span>
             </div>
             
-            <div className="flex justify-between items-center px-4 py-2 mt-4">
+            <div className="flex justify-between items-center px-4 py-2 mt-2">
                 <BottomButton text={'Upgrd'} />
                 
                 <BottomButton text={'Boost'} />
