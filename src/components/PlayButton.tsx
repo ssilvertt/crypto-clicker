@@ -4,7 +4,7 @@ import { useClickerStore } from '../store/clicker-store.ts';
 import {useCloudStorage} from '@vkruglikov/react-telegram-web-app';
 
 export function PlayButton(){
-    const { increment } = useClickerStore();
+    const { increment, setClicks } = useClickerStore();
     const [clickCount, setClickCount] = useState(0);
     const { getItem, setItem } = useCloudStorage();
     const handleTouchStart = (event: TouchEvent) => {
@@ -21,7 +21,7 @@ export function PlayButton(){
     useEffect(() => {
         const clicks = getItem('clicks');
         if (clicks) {
-            setClickCount(Number(clicks));
+            setClicks(Number(clicks));
         }
         
         return () => {
