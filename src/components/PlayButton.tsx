@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
-import { TouchEvent, useState } from 'react';
+import { TouchEvent, useEffect, useState } from 'react';
 import { useClickerStore } from '../store/clicker-store.ts';
+import {useCloudStorage} from '@vkruglikov/react-telegram-web-app';
 
 export function PlayButton(){
     const { increment } = useClickerStore();
     const [clickCount, setClickCount] = useState(0);
-    
+    const { getItem, setItem } = useCloudStorage();
     const handleTouchStart = (event: TouchEvent) => {
         if (event.touches.length === 1) {
             setClickCount((prevCount) => prevCount + 1);
@@ -16,6 +17,17 @@ export function PlayButton(){
         increment(clickCount);
         setClickCount(0);
     };
+    
+    useEffect(() => {
+        const clicks = getItem('clicks');
+        if (clicks) {
+            setClickCount(Number(clicks));
+        }
+        
+        return () => {
+            setItem('clicks', String(clickCount));
+        }
+    }, []);
     
 return (
     <motion.div
