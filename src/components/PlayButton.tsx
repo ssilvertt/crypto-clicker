@@ -34,6 +34,8 @@ export function PlayButton() {
     };
 
     return (
+        <>
+       
         <motion.div
             className=" mx-auto rounded-full relative mt-4"
             onTouchStart={handleTouchStart}
@@ -48,5 +50,10 @@ export function PlayButton() {
                 className="w-[168px] h-[160px]"
             />
         </motion.div>
+        <div>
+            {(getItem('clicks')).toString()}
+        </div>
+        
+        </>
     );
 }
