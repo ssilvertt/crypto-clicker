@@ -30,6 +30,7 @@ export function PlayButton() {
     const handleTouchEnd = () => {
         increment(clickCount);
         setClickCount(0);
+        setItem('clicks', count.toString());
     };
 
     return (
