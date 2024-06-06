@@ -1,4 +1,4 @@
-import { useCloudStorage } from '@vkruglikov/react-telegram-web-app';
+// import { useCloudStorage } from '@vkruglikov/react-telegram-web-app';
 import { motion } from 'framer-motion';
 import { TouchEvent, useEffect, useState } from 'react';
 import { useClickerStore } from '../store/clicker-store.ts';
@@ -6,7 +6,7 @@ import { useClickerStore } from '../store/clicker-store.ts';
 export function PlayButton() {
     const { increment, setClicks, count } = useClickerStore();
     const [clickCount, setClickCount] = useState(0);
-    const { getItem, setItem } = useCloudStorage();
+    // const { getItem, setItem } = useCloudStorage();
 
     // useEffect(() => {
     //     const storedClicks = getItem('clicks');
