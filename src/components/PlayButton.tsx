@@ -18,7 +18,7 @@ export function PlayButton() {
         if (storedClicks !== null && !isNaN(Number(storedClicks))) {
             setClicks(Number(storedClicks));
         }
-    }, [count, getItem, setClicks, setItem]);
+    }, []);
     
 
     const handleTouchStart = (event: TouchEvent) => {
