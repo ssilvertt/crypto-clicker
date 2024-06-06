@@ -10,7 +10,7 @@ export function PlayButton() {
 
     useEffect(() => {
         const storedClicks = getItem('clicks');
-        if (storedClicks !== null) {
+        if (storedClicks !== null && !isNaN(Number(storedClicks))) {
             setClicks(Number(storedClicks));
         }
         
