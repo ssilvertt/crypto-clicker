@@ -13,6 +13,7 @@
         "@vkruglikov/react-telegram-web-app": "^2.1.9",
         "framer-motion": "^11.2.4",
         "react": "^18.2.0",
+        "react-beforeunload": "^2.6.0",
         "react-device-detect": "^2.2.3",
         "react-dom": "^18.2.0",
         "react-icons": "^5.2.1",

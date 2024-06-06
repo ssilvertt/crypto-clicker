@@ -1,32 +1,25 @@
-// import { useCloudStorage } from '@vkruglikov/react-telegram-web-app';
+import { useCloudStorage } from '@vkruglikov/react-telegram-web-app';
 import { motion } from 'framer-motion';
 import { TouchEvent, useEffect, useState } from 'react';
 import { useClickerStore } from '../store/clicker-store.ts';
+import {useBeforeUnload} from 'react-router-dom';
 
 export function PlayButton() {
-    const { increment, setClicks, count } = useClickerStore();
+    const { increment, setClicks , count } = useClickerStore();
     const [clickCount, setClickCount] = useState(0);
-    // const { getItem, setItem } = useCloudStorage();
+    const { getItem, setItem } = useCloudStorage();
+    useBeforeUnload(() => {
+        setItem('clicks', count.toString());
+    });
+ 
 
-    // useEffect(() => {
-    //     const storedClicks = getItem('clicks');
-    //     if (storedClicks !== null && !isNaN(Number(storedClicks))) {
-    //         setClicks(Number(storedClicks));
-    //     }
-    //     return () => {
-    //         setItem('clicks', count.toString())
-    //     };
-    // }, [count, getItem, setClicks, setItem]);
-    
     useEffect(() => {
-        const stored = localStorage.getItem('clicks');
-        if (stored !== null && !isNaN(Number(stored))) {
-            setClicks(Number(stored));
+        const storedClicks = getItem('clicks');
+        if (storedClicks !== null && !isNaN(Number(storedClicks))) {
+            setClicks(Number(storedClicks));
         }
-        return() =>{
-            localStorage.setItem('clicks', count.toString())
-        }
-    }, []);
+    }, [count, getItem, setClicks, setItem]);
+    
 
     const handleTouchStart = (event: TouchEvent) => {
         if (event.touches.length === 1) {
