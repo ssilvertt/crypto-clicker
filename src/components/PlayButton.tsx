@@ -13,7 +13,6 @@ export function PlayButton() {
         if (storedClicks !== null && !isNaN(Number(storedClicks))) {
             setClicks(Number(storedClicks));
         }
-        setClicks(1);
         return () => {
             setItem('clicks', count.toString());
         };
