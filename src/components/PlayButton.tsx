@@ -20,7 +20,7 @@ export function PlayButton(){
     
     useEffect(() => {
         const clicks = getItem('clicks');
-        if (clicks) {
+        if (isNaN(Number(clicks))) {
             setClicks(Number(clicks));
         }
         
