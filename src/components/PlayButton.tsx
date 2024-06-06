@@ -8,15 +8,25 @@ export function PlayButton() {
     const [clickCount, setClickCount] = useState(0);
     const { getItem, setItem } = useCloudStorage();
 
+    // useEffect(() => {
+    //     const storedClicks = getItem('clicks');
+    //     if (storedClicks !== null && !isNaN(Number(storedClicks))) {
+    //         setClicks(Number(storedClicks));
+    //     }
+    //     return () => {
+    //         setItem('clicks', count.toString())
+    //     };
+    // }, [count, getItem, setClicks, setItem]);
+    
     useEffect(() => {
-        const storedClicks = getItem('clicks');
-        if (storedClicks !== null && !isNaN(Number(storedClicks))) {
-            setClicks(Number(storedClicks));
+        const stored = localStorage.getItem('clicks');
+        if (stored !== null && !isNaN(Number(stored))) {
+            setClicks(Number(stored));
         }
-        return () => {
-            setItem('clicks', count.toString());
-        };
-    }, [count, getItem, setClicks, setItem]);
+        return() =>{
+            localStorage.setItem('clicks', count.toString())
+        }
+    }, []);
 
     const handleTouchStart = (event: TouchEvent) => {
         if (event.touches.length === 1) {
