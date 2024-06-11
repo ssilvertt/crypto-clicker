@@ -10,10 +10,18 @@ interface NavLinkProps {
 
 export function NavLink({ icon, text, path, isActive }: NavLinkProps) {
     return (
-        <Link to={path} className="text-gray-600 h-12 flex items-center">
-            <div className="flex flex-col mx-auto space-y-2">
-                <div className={`mx-auto ${isActive ? 'text-white' : 'text-muted'}`}>{icon}</div>
-                <div className={`mx-auto text-xs ${isActive ? 'text-white' : 'text-muted'}`}>{text}</div>
+        <Link to={path}>
+            <div className="flex flex-col items-start justify-start w-[70px] h-[34px]">
+                <div
+                    className={`mx-auto ${isActive ? 'text-active' : 'text-light'}`}
+                >
+                    {icon}
+                </div>
+                <div
+                    className={`mx-auto text-navicon tracking-normal ${isActive ? 'text-active' : 'text-light'}`}
+                >
+                    {text}
+                </div>
             </div>
         </Link>
     );

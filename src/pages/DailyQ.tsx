@@ -1,6 +1,6 @@
 
 
-export function Mine() {
+export function DailyQ() {
     
     
     return (
@@ -9,7 +9,7 @@ export function Mine() {
         
         <>
             <div className="">
-                mine
+                daily quest
             </div>
         </>
     );

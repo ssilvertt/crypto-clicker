@@ -1,6 +1,6 @@
 
 
-export function Mine() {
+export function Friends() {
     
     
     return (
@@ -9,7 +9,7 @@ export function Mine() {
         
         <>
             <div className="">
-                mine
+                friends
             </div>
         </>
     );

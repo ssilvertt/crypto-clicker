@@ -11,15 +11,30 @@ import { MobileView, BrowserView } from 'react-device-detect';
 
 const links = [
     {
-        icon: <img src='/Exchange.svg' alt='Exchange' className='h-6 w-6' />,
-        text: 'Exchange',
+        icon: <img src='/planet.svg' alt='Farming' className='h-[22px] w-[22px]' />,
+        text: 'Farming',
         path: '/',
     },
 
     {
-        icon: <img src='/Mine.svg' alt='Mine' className='h-6 w-6' />,
-        text: 'Mine',
+        icon: <img src='/users.svg' alt='Users' className='h-[22px] w-[22px]' />,
+        text: 'Friends',
+        path: '/friends',
+    },
+    {
+        icon: <img src='/coin.svg' alt='Coin' className='h-[22px] w-[22px]' />,
+        text: 'Earn',
+        path: '/earn',
+    },
+    {
+        icon: <img src='/axe.svg' alt='Mine' className='h-[22px] w-[22px]' />,
+        text: 'Axe',
         path: '/mine',
+    },
+    {
+        icon: <img src='/file-text.svg' alt='DailyQ' className='h-[22px] w-[22px]' />,
+        text: 'Daily Q',
+        path: '/daily',
     },
 ];
 
@@ -47,13 +62,13 @@ export function DefaultLayout() {
     return (
         <WebAppProvider>
             <MobileView>
-            <div className="min-h-screen bg-main flex flex-col font-space">
+            <div className="min-h-screen bg-main flex flex-col font-helvetica">
                 <div className="flex-grow">
                     <Outlet />
                 </div>
                 
                 <nav
-                    className="fixed bg-nav bottom-0 left-0 right-0 shadow-md flex justify-around py-2 sm:flex-row border-t border-secondary">
+                    className="fixed bottom-4 left-3 right-3 flex flex-row justify-between items-center py-3 px-4 box-border rounded-[48px] bg-nav">
                     {links.map((link) => (
                         <NavLink
                             key={link.path}

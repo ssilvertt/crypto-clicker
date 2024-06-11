@@ -50,9 +50,6 @@ export function PlayButton() {
                 className="w-[168px] h-[160px]"
             />
         </motion.div>
-        <div>
-            {(getItem('clicks')).toString()}
-        </div>
         
         </>
     );
