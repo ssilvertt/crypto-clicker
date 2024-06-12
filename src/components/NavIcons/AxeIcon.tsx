@@ -1,7 +1,7 @@
 export function AxeIcon({color} : {color:string}){
     return (
         <svg
-            className={`w-[24px] h-[24px] stroke-current${color}`}
+            className={`w-[22px] h-[22px] stroke-current${color}`}
             width="24"
             height="24"
             viewBox="0 0 24 24"

@@ -1,7 +1,7 @@
 export function PlanetIcon({color} : {color: string}){
     return (
         <svg
-            className={`w-6 h-6 stroke-current${color}`}
+            className={`w-[22px] h-[22px] stroke-current${color}`}
             width="22"
             height="22"
             viewBox="0 0 22 22"
