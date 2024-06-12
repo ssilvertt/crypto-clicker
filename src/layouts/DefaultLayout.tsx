@@ -5,34 +5,39 @@ import {
 } from '@vkruglikov/react-telegram-web-app';
 import { useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
+import { AxeIcon } from '../components/NavIcons/AxeIcon.tsx';
+import { CoinIcon } from '../components/NavIcons/CoinIcon.tsx';
+import { DailyQIcon } from '../components/NavIcons/DailyQIcon.tsx';
+import { PlanetIcon } from '../components/NavIcons/PlanetIcon.tsx';
+import { UsersIcon } from '../components/NavIcons/UsersIcon.tsx';
 import { NavLink } from '../components/NavLink.tsx';
 import {useUserStore } from '../store/user-store.ts';
 import { MobileView, BrowserView } from 'react-device-detect';
 
 const links = [
     {
-        icon: <img src='/planet.svg' alt='Farming' className='h-[22px] w-[22px]' />,
+        icon: <PlanetIcon color='text-light' />,
         text: 'Farming',
         path: '/',
     },
 
     {
-        icon: <img src='/users.svg' alt='Users' className='h-[22px] w-[22px]' />,
+        icon: <UsersIcon color='text-light'/>,
         text: 'Friends',
         path: '/friends',
     },
     {
-        icon: <img src='/coin.svg' alt='Coin' className='h-[22px] w-[22px]' />,
+        icon: <CoinIcon color='text-light'/>,
         text: 'Earn',
         path: '/earn',
     },
     {
-        icon: <img src='/axe.svg' alt='Mine' className='h-[22px] w-[22px]' />,
+        icon: <AxeIcon color='text-light'/>,
         text: 'Axe',
         path: '/mine',
     },
     {
-        icon: <img src='/file-text.svg' alt='DailyQ' className='h-[22px] w-[22px]' />,
+        icon: <DailyQIcon color='text-light' />,
         text: 'Daily Q',
         path: '/daily',
     },

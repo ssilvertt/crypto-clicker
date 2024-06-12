@@ -10,3 +10,14 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
+.xd svg {
+	width: 300px;
+}
+
+.xd svg path{
+	fill: green !important;
+}
+.xd svg text{
+	fill: green !important;
+}
