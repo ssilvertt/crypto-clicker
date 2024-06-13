@@ -85,7 +85,7 @@ export function Farming() {
                                 alt="coin"
                             />
                             <div className="text-center font-bold leading-10 text-[40px] text-light">
-                                {(4000000).toLocaleString('ru-RU')}
+                                {(491035844).toLocaleString('ru-RU')}
                             </div>
                         </div>
                         <div className="flex flex-col justify-start items-center mt-3">
