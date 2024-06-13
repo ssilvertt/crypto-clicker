@@ -1,0 +1,24 @@
+<svg width="14.000000" height="14.000000" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<linearGradient x1="7.000000" y1="1.000000" x2="7.000000" y2="13.000000" id="paint_linear_66_68_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#FEB700"/>
+			<stop offset="1.000000" stop-color="#FEB700" stop-opacity="0.000000"/>
+		</linearGradient>
+		<radialGradient gradientTransform="translate(7 7) rotate(90) scale(6 6)" cx="0.000000" cy="0.000000" r="1.000000" id="paint_radial_66_69_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#FFFFFF"/>
+			<stop offset="0.700000" stop-color="#FEB700"/>
+			<stop offset="1.000000" stop-color="#6D4C00"/>
+		</radialGradient>
+		<linearGradient x1="7.000000" y1="13.000000" x2="7.000000" y2="1.000000" id="paint_linear_66_69_1" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#FEB700"/>
+			<stop offset="0.800000" stop-color="#FEB700" stop-opacity="0.000000"/>
+		</linearGradient>
+	</defs>
+	<circle id="Ellipse 15" cx="7.000000" cy="7.000000" r="6.500000" stroke="url(#paint_linear_66_68_0)" stroke-opacity="1.000000" stroke-width="1.000000"/>
+	<circle id="Ellipse 14" cx="7.000000" cy="7.000000" r="6.000000" fill="url(#paint_radial_66_69_0)" fill-opacity="1.000000"/>
+	<circle id="Ellipse 14" cx="7.000000" cy="7.000000" r="5.625000" stroke="url(#paint_linear_66_69_1)" stroke-opacity="1.000000" stroke-width="0.750000"/>
+	<path id="$" d="M5.88 7.88C5.87 8.16 5.95 8.39 6.1 8.56C6.26 8.72 6.45 8.82 6.68 8.87L6.68 7.3C6.65 7.29 6.62 7.28 6.57 7.27C6.53 7.26 6.49 7.25 6.44 7.23C6.25 7.18 6.07 7.13 5.89 7.06C5.71 6.99 5.55 6.9 5.4 6.79C5.26 6.68 5.15 6.54 5.07 6.37C4.98 6.2 4.94 5.99 4.94 5.74C4.94 5.49 4.99 5.26 5.08 5.07C5.18 4.87 5.31 4.71 5.47 4.58C5.63 4.44 5.82 4.34 6.03 4.27C6.24 4.2 6.45 4.15 6.68 4.14L6.68 3.56L7.12 3.56L7.12 4.14C7.35 4.16 7.56 4.21 7.75 4.29C7.95 4.36 8.13 4.46 8.28 4.59C8.43 4.71 8.55 4.87 8.64 5.06C8.74 5.25 8.79 5.47 8.81 5.73L7.74 5.73C7.74 5.54 7.68 5.36 7.56 5.22C7.44 5.08 7.29 5.02 7.12 5.02L7.12 6.34C7.18 6.36 7.24 6.37 7.3 6.39C7.37 6.4 7.43 6.42 7.5 6.44C7.87 6.54 8.16 6.66 8.36 6.81C8.56 6.96 8.71 7.11 8.8 7.27C8.9 7.43 8.95 7.59 8.97 7.75C8.99 7.91 9 8.06 9 8.18C9 8.29 8.97 8.43 8.91 8.6C8.86 8.77 8.76 8.93 8.61 9.09C8.47 9.25 8.28 9.39 8.04 9.52C7.8 9.64 7.5 9.71 7.12 9.74L7.12 10.38L6.68 10.38L6.68 9.74C6.12 9.7 5.68 9.53 5.37 9.22C5.05 8.92 4.87 8.47 4.82 7.88L5.88 7.88ZM7.12 8.87C7.21 8.86 7.3 8.84 7.4 8.81C7.5 8.78 7.59 8.73 7.66 8.67C7.74 8.61 7.81 8.54 7.86 8.45C7.91 8.36 7.93 8.26 7.93 8.13C7.93 7.94 7.87 7.8 7.74 7.7C7.62 7.6 7.42 7.51 7.12 7.43L7.12 8.87ZM6.68 5.02C6.59 5.02 6.51 5.03 6.43 5.05C6.35 5.08 6.28 5.12 6.21 5.17C6.15 5.22 6.1 5.29 6.06 5.37C6.02 5.44 6 5.53 6 5.64C6 5.8 6.06 5.93 6.16 6.02C6.27 6.11 6.44 6.18 6.68 6.24L6.68 5.02Z" fill="#533A00" fill-opacity="1.000000" fill-rule="nonzero"/>
+</svg>

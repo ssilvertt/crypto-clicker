@@ -1,24 +1,12 @@
-import { useCloudStorage } from '@vkruglikov/react-telegram-web-app';
+
 import { motion } from 'framer-motion';
-import { TouchEvent, useEffect, useState } from 'react';
+import { TouchEvent, useState } from 'react';
 import { useClickerStore } from '../store/clicker-store.ts';
-import {useBeforeUnload} from 'react-router-dom';
 
 export function PlayButton() {
-    const { increment, setClicks , count } = useClickerStore();
+    const { increment } = useClickerStore();
     const [clickCount, setClickCount] = useState(0);
-    const { getItem, setItem } = useCloudStorage();
-    useBeforeUnload(() => {
-        setItem('clicks', count.toString());
-    });
- 
-
-    useEffect(() => {
-        const storedClicks = getItem('clicks');
-        if (storedClicks !== null && !isNaN(Number(storedClicks))) {
-            setClicks(Number(storedClicks));
-        }
-    }, []);
+    
     
 
     const handleTouchStart = (event: TouchEvent) => {
@@ -30,7 +18,6 @@ export function PlayButton() {
     const handleTouchEnd = () => {
         increment(clickCount);
         setClickCount(0);
-        setItem('clicks', count.toString());
     };
 
     return (

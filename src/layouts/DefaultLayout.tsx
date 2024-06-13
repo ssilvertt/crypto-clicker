@@ -68,7 +68,7 @@ export function DefaultLayout() {
         <WebAppProvider>
             <MobileView>
                 <div className="bg-black">
-                    <div className="min-h-screen bg flex flex-col font-helvetica justify-between items-center px-4">
+                    <div className="min-h-screen bg flex flex-col font-helvetica justify-between items-center p-4">
                         <div className="flex-grow">
                             <Outlet />
                         </div>

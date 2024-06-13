@@ -1,9 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-    important: true,
     content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
     theme: {
         extend: {
+            strokeGradient: {
+                'gradient': ['linear-gradient(to right, rgb(69, 8, 223), rgb(17, 0, 60))'],
+            },
             colors: {
                 main: '#120f24',
                 secondary: '#26214a',
