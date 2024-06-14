@@ -43,12 +43,9 @@
 
 
 .glow-effect {
-	position: absolute;
-	width: 20px;
-	height: 20px;
-	top: 5px;
 	filter: blur(16px);
 	background: linear-gradient(-45deg, rgb(254, 183, 0), rgb(255, 219, 127) 66.095%);
 	opacity: 0.5;
-	pointer-events: none; /* Ensures the glow effect doesn't interfere with mouse events */
+	width: 20px;
+	height: 20px;
 }
