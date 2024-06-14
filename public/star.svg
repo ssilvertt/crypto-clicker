@@ -1,0 +1,24 @@
+<svg width="52.000000" height="52.000000" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<filter id="filter_18_684_dd" x="0.000000" y="0.000000" width="52.000000" height="52.000000" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+			<feGaussianBlur stdDeviation="5.33333" result="effect_layerBlur_1"/>
+		</filter>
+		<linearGradient x1="36.000000" y1="36.000000" x2="16.000004" y2="16.000002" id="paint_linear_18_684_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#FEB700"/>
+			<stop offset="0.660948" stop-color="#FFDB7F"/>
+		</linearGradient>
+		<linearGradient x1="38.000000" y1="38.000004" x2="14.000004" y2="14.000008" id="paint_linear_18_685_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#FEB700"/>
+			<stop offset="0.660948" stop-color="#FFDB7F"/>
+		</linearGradient>
+	</defs>
+	<g opacity="0.500000" filter="url(#filter_18_684_dd)">
+		<circle id="Ellipse 6" cx="26.000000" cy="26.000000" r="10.000000" fill="url(#paint_linear_18_684_0)" fill-opacity="1.000000"/>
+	</g>
+	<path id="Star 15" d="M25.04 16.92L23.53 21.6C23.39 22.01 23.01 22.29 22.57 22.29L17.66 22.29C16.69 22.29 16.29 23.53 17.07 24.1L21.05 26.98C21.4 27.24 21.55 27.69 21.41 28.1L19.89 32.78C19.59 33.7 20.65 34.46 21.43 33.89L25.41 31.01C25.76 30.75 26.23 30.75 26.58 31.01L30.56 33.89C31.34 34.46 32.4 33.7 32.1 32.78L30.58 28.1C30.44 27.69 30.59 27.24 30.94 26.98L34.92 24.1C35.7 23.53 35.3 22.29 34.33 22.29L29.42 22.29C28.98 22.29 28.6 22.01 28.46 21.6L26.95 16.92C26.65 16 25.34 16 25.04 16.92Z" fill="url(#paint_linear_18_685_0)" fill-opacity="1.000000" fill-rule="evenodd"/>
+</svg>

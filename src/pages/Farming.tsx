@@ -1,4 +1,4 @@
-
+import { ProgressBar } from '../components/ProgressBar.tsx';
 
 
 export function Farming() {
@@ -25,9 +25,10 @@ export function Farming() {
                                 </small>
                             </div>
                         </div>
-
+                        
                         <div className="flex">
-                            <button className="rounded-[100px] border border-active px-4 py-2 flex gap-2 items-center relative bg-transparent text-center leading-6 text-base text-active">
+                            <button
+                                className="rounded-[100px] border border-active px-4 py-2 flex gap-2 items-center relative bg-transparent text-center leading-6 text-base text-active">
                                 Choose Exchange
                             </button>
                         </div>
@@ -112,12 +113,32 @@ export function Farming() {
                                     <p className="opacity-40 text-center leading-6 text-base text-light">Level</p>
                                     <p className="text-center leading-6 text-base text-light">2/10</p>
                                 </div>
+                            
                             </div>
+                            <ProgressBar value='27' />
                         </div>
-                       
+                    
                     </div>
                 
                 </div>
+                
+                <img src='/Frame%2032.svg' alt='rocket' className='mt-6' />
+                
+                <div className='flex flex-row justify-between items-start mt-3 w-full'>
+                    <div
+                        className='relative flex flex-row py-2 px-4 gap-1 box-border rounded-[48px] bg-[#4508df]/[0.32]'>
+                        <div className='relative'>
+                            <img src='/Star%2015.svg' alt='coin' className='h-6 w-6' />
+                            <div className='glow-effect'></div>
+                        </div>
+                        <p className='leading-6 text-base text-light'>159/1000</p>
+                    </div>
+                    <div className='flex flex-row py-2 px-4 gap-1 box-border rounded-[48px] bg-[#4508df]/[0.32]'>
+                        <img src='/Star%2015.svg' alt='coin' className='h-6 w-6' />
+                        <p className='leading-6 text-base text-light'>159/1000</p>
+                    </div>
+                </div>
+            
             </div>
         </>
     );
