@@ -122,7 +122,7 @@ export function Farming() {
 
                 <img src="/Frame%2032.svg" alt="rocket" className="mt-6" />
 
-                <div className="flex flex-row justify-between items-start mt-3 w-full">
+                <div className="flex flex-row justify-between items-start w-full mt-5">
                     <div className="flex flex-row items-center py-2 px-4 gap-1 box-border rounded-[48px] bg-[#4508df]/[0.32]">
                         <GlowingStarWithIcon />
                         <p className="leading-6 text-base text-light">
@@ -130,7 +130,7 @@ export function Farming() {
                         </p>
                     </div>
                     <div className="flex flex-row items-center py-2 px-4 gap-1 box-border rounded-[48px] bg-[#4508df]/[0.32]">
-                        <GlowingStarWithIcon />
+                        <img src='/rocket.svg' alt='rocket' className='h-6 w-6' />
                         <p className="leading-6 text-base text-light">
                             159/1000
                         </p>
