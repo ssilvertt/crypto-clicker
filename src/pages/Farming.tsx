@@ -4,7 +4,7 @@ import { ProgressBar } from '../components/ProgressBar.tsx';
 export function Farming() {
     return (
         <>
-            <div className="flex flex-col min-h-screen justify-between items-center pb-[100px]">
+            <div className="flex flex-col min-h-screen justify-between items-center pb-[110px]">
                 <div className="w-full">
                     <div className="flex flex-row justify-between items-start">
                         <div className="flex flex-row justify-between gap-16 items-center">
