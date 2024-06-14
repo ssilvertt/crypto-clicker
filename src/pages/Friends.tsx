@@ -1,4 +1,4 @@
-import copy from '../copy.svg'
+import copy from '../copy.svg';
 
 export function Friends() {
     return (
@@ -12,31 +12,35 @@ export function Friends() {
                 </p>
             </div>
             <div className="flex flex-col gap-2 items-center relative w-full mt-4">
-                <div className="rounded-3xl px-4 py-3 flex gap-4 items-center relative w-full bg-[#4508df]/[0.32]">
-                    <img src="/userIcon.svg" alt="user" />
-                    <div className="flex flex-col items-start flex-1 relative w-full">
-                        <p className="font-bold leading-6 text-base text-light">
-                            Invite a friend
-                        </p>
-                        <div className="flex gap-1 justify-center items-center relative">
-                            <img src="/coin.svg" alt="coin" />
-                            <p className="text-center leading-6 text-base text-light">
-                                + 5000 coins
+                <div className="rounded-[16px] p-px bg-gradient-to-t from-[#4508df] to-transparent to-100% flex gap-4 items-center relative w-full bg-[#4508df]/[0.32]">
+                    <div className="rounded-[16px] px-4 py-3 flex gap-4 items-center relative w-full bg-[#210b5c]">
+                        <img src="/userIcon.svg" alt="user" />
+                        <div className="flex flex-col items-start flex-1 relative w-full">
+                            <p className="font-bold leading-6 text-base text-light">
+                                Invite a friend
                             </p>
+                            <div className="flex gap-1 justify-center items-center relative">
+                                <img src="/coin.svg" alt="coin" />
+                                <p className="text-center leading-6 text-base text-light">
+                                    + 5000 coins
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div className="rounded-3xl px-4 py-3 flex gap-4 items-center relative w-full bg-[#feb700]">
-                    <img src="/yellowUserIcon.svg" alt="user" />
-                    <div className="flex flex-col items-start flex-1 relative w-full">
-                        <p className="font-bold leading-6 text-base text-[#533a00]">
-                            Invite a 3 friends
-                        </p>
-                        <div className="flex gap-1 justify-center items-center relative">
-                            <img src="/coin.svg" alt="coin" />
-                            <p className="text-center leading-6 text-base text-[#533a00]">
-                                + 25000 coins
+                <div className="rounded-[16px] p-px flex gap-4 items-center relative w-full bg-gradient-to-t from-[#ffdb7e] to-transparent to-100%">
+                    <div className="rounded-[16px] px-4 py-3 flex gap-4 items-center relative w-full bg-[#feb700]">
+                        <img src="/yellowUserIcon.svg" alt="user" />
+                        <div className="flex flex-col items-start flex-1 relative w-full">
+                            <p className="font-bold leading-6 text-base text-[#533a00]">
+                                Invite a 3 friends
                             </p>
+                            <div className="flex gap-1 justify-center items-center relative">
+                                <img src="/coin.svg" alt="coin" />
+                                <p className="text-center leading-6 text-base text-[#533a00]">
+                                    + 25000 coins
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -59,10 +63,9 @@ export function Friends() {
                             </p>
                         </div>
                         <div className="rounded-[100px] flex py-3 justify-center items-center  w-12 bg-active">
-                            <img src={copy} alt='copy' className='w-6 h-6'/>
+                            <img src={copy} alt="copy" className="w-6 h-6" />
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
