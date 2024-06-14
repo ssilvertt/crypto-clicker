@@ -1,3 +1,4 @@
+import GlowingStarWithIcon from '../components/GlowingStarWithIcon.tsx';
 import { ProgressBar } from '../components/ProgressBar.tsx';
 
 
@@ -126,17 +127,11 @@ export function Farming() {
                 
                 <div className='flex flex-row justify-between items-start mt-3 w-full'>
                     <div className='flex flex-row py-2 px-4 gap-1 box-border rounded-[48px] bg-[#4508df]/[0.32]'>
-                        <div className='relative'>
-                            <img src='/Star%2015.svg' alt='coin' className='h-6 w-6' />
-                            <div className='absolute top-0 left-0 h-6 w-6 glow-effect'></div>
-                        </div>
+                        <GlowingStarWithIcon />
                         <p className='leading-6 text-base text-light'>159/1000</p>
                     </div>
                     <div className='flex flex-row py-2 px-4 gap-1 box-border rounded-[48px] bg-[#4508df]/[0.32]'>
-                        <div className='relative'>
-                            <img src='/Star%2015.svg' alt='coin' className='h-6 w-6' />
-                            <div className='absolute top-0 left-0 h-6 w-6 glow-effect'></div>
-                        </div>
+                        <GlowingStarWithIcon />
                         <p className='leading-6 text-base text-light'>159/1000</p>
                     </div>
                 </div>
