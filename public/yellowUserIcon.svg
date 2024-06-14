@@ -1,0 +1,21 @@
+<svg width="48.000000" height="48.000000" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip51_1499">
+			<rect id="Frame 43" rx="23.500000" width="47.000000" height="47.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<linearGradient x1="24.000000" y1="0.000000" x2="24.000000" y2="48.000000" id="paint_linear_51_1499_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#533A00"/>
+			<stop offset="1.000000" stop-color="#533A00" stop-opacity="0.000000"/>
+		</linearGradient>
+	</defs>
+	<rect id="Frame 43" rx="23.500000" width="47.000000" height="47.000000" transform="translate(0.500000 0.500000)" fill="url(#paint_linear_51_1499_0)" fill-opacity="0.320000"/>
+	<g clip-path="url(#clip51_1499)">
+		<circle id="Oval" cx="20.000000" cy="17.333252" r="5.333334" stroke="#533A00" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round"/>
+		<path id="Path" d="M12 36L12 33.33C12 30.38 14.38 28 17.33 28L22.66 28C25.61 28 28 30.38 28 33.33L28 36" stroke="#533A00" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+		<path id="Path" d="M29.33 12.17C31.69 12.77 33.34 14.9 33.34 17.33C33.34 19.77 31.69 21.9 29.33 22.5" stroke="#533A00" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+		<path id="Path" d="M36 36L36 33.33C35.98 30.91 34.34 28.8 32 28.2" stroke="#533A00" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+	</g>
+</svg>
