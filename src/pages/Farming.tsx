@@ -1,9 +1,7 @@
 import GlowingStarWithIcon from '../components/GlowingStarWithIcon.tsx';
 import { ProgressBar } from '../components/ProgressBar.tsx';
 
-
 export function Farming() {
-
     return (
         <>
             <div className="flex flex-col justify-start items-center">
@@ -26,10 +24,9 @@ export function Farming() {
                                 </small>
                             </div>
                         </div>
-                        
+
                         <div className="flex">
-                            <button
-                                className="rounded-[100px] border border-active px-4 py-2 flex gap-2 items-center relative bg-transparent text-center leading-6 text-base text-active">
+                            <button className="rounded-[100px] border border-active px-4 py-2 flex gap-2 items-center relative bg-transparent text-center leading-6 text-base text-active">
                                 Choose Exchange
                             </button>
                         </div>
@@ -37,8 +34,7 @@ export function Farming() {
                 </div>
                 <div className="flex flex-col justify-start items-center mt-4">
                     <div className="flex flex-row justify-center items-start gap-1">
-                        <div
-                            className="rounded-[48px] px-4 pt-2 pb-1 flex flex-col gap-0 justify-center items-center relative bg-[#4508df]/[0.32]">
+                        <div className="rounded-[48px] px-4 pt-2 pb-1 flex flex-col gap-0 justify-center items-center relative bg-[#4508df]/[0.32]">
                             <small className="opacity-50 text-center leading-3 text-xs text-light">
                                 Earning per Click
                             </small>
@@ -46,8 +42,7 @@ export function Farming() {
                                 +1
                             </p>
                         </div>
-                        <div
-                            className="rounded-[48px] px-4 pt-2 pb-1 flex flex-col gap-0 justify-center items-center relative bg-[#4508df]/[0.32]">
+                        <div className="rounded-[48px] px-4 pt-2 pb-1 flex flex-col gap-0 justify-center items-center relative bg-[#4508df]/[0.32]">
                             <small className="opacity-50 text-center leading-3 text-xs text-light">
                                 Coins to Level Up
                             </small>
@@ -62,8 +57,7 @@ export function Farming() {
                                 </p>
                             </div>
                         </div>
-                        <div
-                            className="rounded-[48px] px-4 pt-2 pb-1 flex flex-col gap-0 justify-center items-center relative bg-[#4508df]/[0.32]">
+                        <div className="rounded-[48px] px-4 pt-2 pb-1 flex flex-col gap-0 justify-center items-center relative bg-[#4508df]/[0.32]">
                             <small className="opacity-50 text-center leading-3 text-xs text-light">
                                 Coins for House
                             </small>
@@ -93,7 +87,9 @@ export function Farming() {
                         <div className="flex flex-col justify-start items-center mt-3">
                             <div className="flex flex-row w-full justify-between gap-64">
                                 <div className="flex gap-0 items-center">
-                                    <p className="leading-6 text-base text-light">Cadet</p>
+                                    <p className="leading-6 text-base text-light">
+                                        Cadet
+                                    </p>
                                     <svg
                                         width="16"
                                         height="14"
@@ -111,31 +107,35 @@ export function Farming() {
                                     </svg>
                                 </div>
                                 <div className="flex gap-2 items-center">
-                                    <p className="opacity-40 text-center leading-6 text-base text-light">Level</p>
-                                    <p className="text-center leading-6 text-base text-light">2/10</p>
+                                    <p className="opacity-40 text-center leading-6 text-base text-light">
+                                        Level
+                                    </p>
+                                    <p className="text-center leading-6 text-base text-light">
+                                        2/10
+                                    </p>
                                 </div>
-                            
                             </div>
-                            <ProgressBar value='27' />
+                            <ProgressBar value="27" />
                         </div>
-                    
-                    </div>
-                
-                </div>
-                
-                <img src='/Frame%2032.svg' alt='rocket' className='mt-6' />
-                
-                <div className='flex flex-row justify-between items-start mt-3 w-full'>
-                    <div className='flex flex-row py-2 px-4 gap-1 box-border rounded-[48px] bg-[#4508df]/[0.32]'>
-                        <GlowingStarWithIcon />
-                        <p className='leading-6 text-base text-light'>159/1000</p>
-                    </div>
-                    <div className='flex flex-row py-2 px-4 gap-1 box-border rounded-[48px] bg-[#4508df]/[0.32]'>
-                        <GlowingStarWithIcon />
-                        <p className='leading-6 text-base text-light'>159/1000</p>
                     </div>
                 </div>
-            
+
+                <img src="/Frame%2032.svg" alt="rocket" className="mt-6" />
+
+                <div className="flex flex-row justify-between items-start mt-3 w-full">
+                    <div className="flex flex-row items-center py-2 px-4 gap-1 box-border rounded-[48px] bg-[#4508df]/[0.32]">
+                        <GlowingStarWithIcon />
+                        <p className="leading-6 text-base text-light">
+                            159/1000
+                        </p>
+                    </div>
+                    <div className="flex flex-row items-center py-2 px-4 gap-1 box-border rounded-[48px] bg-[#4508df]/[0.32]">
+                        <GlowingStarWithIcon />
+                        <p className="leading-6 text-base text-light">
+                            159/1000
+                        </p>
+                    </div>
+                </div>
             </div>
         </>
     );
