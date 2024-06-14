@@ -12,8 +12,8 @@ export function Friends() {
                 </p>
             </div>
             <div className="flex flex-col gap-2 items-center relative w-full mt-4">
-                <div className="rounded-[16px] p-px bg-gradient-to-t from-[#4508df] to-transparent to-100% flex gap-4 items-center relative w-full bg-[#4508df]/[0.32]">
-                    <div className="rounded-[16px] px-4 py-3 flex gap-4 items-center relative w-full bg-[#210b5c]">
+                <div className="rounded-[16px] p-px bg-gradient-to-t from-[#4508df] to-transparent to-100%  items-center w-full bg-[#4508df]/[0.32]">
+                    <div className="rounded-[16px] px-4 py-3 flex gap-4 items-center relative w-full bg-[#220c5e]">
                         <img src="/userIcon.svg" alt="user" />
                         <div className="flex flex-col items-start flex-1 relative w-full">
                             <p className="font-bold leading-6 text-base text-light">
@@ -28,7 +28,7 @@ export function Friends() {
                         </div>
                     </div>
                 </div>
-                <div className="rounded-[16px] p-px flex gap-4 items-center relative w-full bg-gradient-to-t from-[#ffdb7e] to-transparent to-100%">
+                <div className="rounded-[16px] p-px w-full bg-gradient-to-t from-[#ffdb7e] to-transparent to-100%">
                     <div className="rounded-[16px] px-4 py-3 flex gap-4 items-center relative w-full bg-[#feb700]">
                         <img src="/yellowUserIcon.svg" alt="user" />
                         <div className="flex flex-col items-start flex-1 relative w-full">
@@ -52,18 +52,24 @@ export function Friends() {
                     </p>
                     <img src="/refresh.svg" alt="coin" />
                 </div>
-                <div className="rounded-2xl p-6 flex flex-col justify-between items-start flex-1 relative w-full h-full bg-[#4508df]/[0.32]">
-                    <h1 className="font-bold leading-10 text-[40px] text-light">
-                        You don't have any invited friends
-                    </h1>
-                    <div className="flex gap-[11px] items-start relative w-full ">
-                        <div className="rounded-[100px] px-6 py-3 flex gap-2 justify-center items-center flex-1 relative w-full bg-active">
-                            <p className="text-center leading-6 text-base text-[#130e24]">
-                                Invite Friends Now
-                            </p>
-                        </div>
-                        <div className="rounded-[100px] flex py-3 justify-center items-center  w-12 bg-active">
-                            <img src={copy} alt="copy" className="w-6 h-6" />
+                <div className="rounded-2xl bg-gradient-to-t from-[#4508df] to-transparent p-px relative w-full h-full bg-[#4508df]/[0.32]">
+                    <div className="rounded-2xl p-6 flex flex-col justify-between items-start flex-1 relative w-full h-full bg-[#1b0651]">
+                        <h1 className="font-bold leading-10 text-[40px] text-light">
+                            You don't have any invited friends
+                        </h1>
+                        <div className="flex gap-[11px] items-start relative w-full ">
+                            <div className="rounded-[100px] px-6 py-3 flex gap-2 justify-center items-center flex-1 relative w-full bg-active">
+                                <p className="text-center leading-6 text-base text-[#130e24]">
+                                    Invite Friends Now
+                                </p>
+                            </div>
+                            <div className="rounded-[100px] flex py-3 justify-center items-center  w-12 bg-active">
+                                <img
+                                    src={copy}
+                                    alt="copy"
+                                    className="w-6 h-6"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
