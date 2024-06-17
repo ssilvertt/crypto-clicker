@@ -73,7 +73,7 @@ export function DefaultLayout() {
                             <Outlet />
                         </div>
 
-                        <nav className="fixed bottom-4 left-3 right-3 flex flex-row justify-between items-center py-3 px-4 box-border rounded-[48px] bg-nav">
+                        <nav className="fixed bottom-4 left-2 right-2 flex flex-row justify-between items-center py-3 px-4 box-border rounded-[48px] bg-nav">
                             {links.map((link) => (
                                 <NavLink
                                     key={link.path}

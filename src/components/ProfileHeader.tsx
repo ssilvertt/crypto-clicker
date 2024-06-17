@@ -1,7 +1,7 @@
 export function ProfileHeader() {
     return (
         <div className="flex flex-row justify-between items-start">
-            <div className="flex flex-row justify-between items-center w-full">
+            <div className="flex flex-row justify-between items-center w-full px-2">
                 <div className="flex flex-row gap-3 justify-between items-center">
                     <div className="relative overflow-hidden rounded-[100px] w-10 h-10 bg-[#0e0e0e]">
                         <img
