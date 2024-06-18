@@ -24,6 +24,7 @@ export function DailyQ() {
                 <RewardCard title='Subscribe to the channel with project news' icon='/telegramIcon.svg' coinAmount={10000} />
                 <RewardCard title='Join our chat on Telegram' icon='/messageIcon.svg' coinAmount={10000} />
                 <RewardCard title='Subscribe to us on Twitter' icon='/twitterIcon.svg' coinAmount={15000} />
+                
             </div>
         </div>
     );

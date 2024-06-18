@@ -17,7 +17,6 @@ export function CoinsInfo() {
                         {(491035844).toLocaleString('ru-RU')}
                     </div>
                 </div>
-            
             </div>
             <div className="flex flex-col justify-start items-center mt-3 w-full">
                 <ProgressStats />
