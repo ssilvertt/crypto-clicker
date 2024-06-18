@@ -1,3 +1,4 @@
+import { RewardCard } from '../components/RewardCard.tsx';
 import copy from '../copy.svg';
 
 export function Friends() {
@@ -12,22 +13,11 @@ export function Friends() {
                 </p>
             </div>
             <div className="flex flex-col gap-2 items-center relative w-full mt-4">
-                <div className="rounded-[16px] p-px bg-gradient-to-t from-[#4508df] to-transparent to-100%  items-center w-full bg-[#4508df]/[0.32]">
-                    <div className="rounded-[16px] px-4 py-3 flex gap-4 items-center relative w-full bg-[#220c5e]">
-                        <img src="/userIcon.svg" alt="user" />
-                        <div className="flex flex-col items-start flex-1 relative w-full">
-                            <p className="font-bold leading-6 text-base text-light">
-                                Invite a friend
-                            </p>
-                            <div className="flex gap-1 justify-center items-center relative">
-                                <img src="/coin.svg" alt="coin" />
-                                <p className="text-center leading-6 text-base text-light">
-                                    + 5000 coins
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <RewardCard
+                    title="Invite a friend"
+                    icon="/userIcon.svg"
+                    coinAmount={5000}
+                />
                 <div className="rounded-[16px] p-px w-full bg-gradient-to-t from-[#ffdb7e] to-transparent to-100%">
                     <div className="rounded-[16px] px-4 py-3 flex gap-4 items-center relative w-full bg-[#feb700]">
                         <img src="/yellowUserIcon.svg" alt="user" />
@@ -52,8 +42,8 @@ export function Friends() {
                     </p>
                     <img src="/refresh.svg" alt="coin" />
                 </div>
-                <div className="rounded-2xl bg-gradient-to-t from-[#4508df] to-transparent p-px relative w-full h-full bg-[#4508df]/[0.32]">
-                    <div className="rounded-2xl p-6 flex flex-col justify-between items-start flex-1 relative w-full h-full bg-[#1b0651]">
+                <div className="rounded-2xl bg-gradient-to-t from-[#4508df] to-transparent p-[2px] relative w-full h-full bg-[#4508df]/[0.32]">
+                    <div className="rounded-[15px] p-6 flex flex-col justify-between items-start flex-1 relative w-full h-full bg-[#1b0651]">
                         <h1 className="font-bold leading-10 text-[40px] text-light">
                             You don't have any invited friends
                         </h1>

@@ -11,8 +11,8 @@ export default {
                 secondary: '#26214a',
                 nav: '#16044a',
                 light: '#D8D5F4',
-                active: '#d575d7'
-                
+                active: '#d575d7',
+                inactive: '#453672',
             },
             fontFamily: {
                 

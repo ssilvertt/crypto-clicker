@@ -35,6 +35,7 @@ const links = [
         icon: <AxeIcon color="text-light" />,
         text: 'Axe',
         path: '/mine',
+        isEnabled: false,
     },
     {
         icon: <DailyQIcon color="text-light" />,
@@ -81,6 +82,7 @@ export function DefaultLayout() {
                                     text={link.text}
                                     path={link.path}
                                     isActive={location.pathname === link.path}
+                                    isEnabled={link.isEnabled}
                                 />
                             ))}
                         </nav>

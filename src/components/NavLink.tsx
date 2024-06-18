@@ -6,23 +6,44 @@ interface NavLinkProps {
     text: string;
     path: string;
     isActive: boolean;
+    isEnabled?: boolean; // Необязательный проп
 }
 
-export function NavLink({ icon, text, path, isActive }: NavLinkProps) {
-    return (
-        <Link to={path}>
-            <div className="flex flex-col items-center justify-start  w-[70px] h-[34px]">
-                <div
-                    className={`${isActive ? 'text-active' : 'text-light'}`}
-                >
-                    {icon}
-                </div>
-                <div
-                    className={`mx-auto text-navicon tracking-normal ${isActive ? 'text-active' : 'text-light'}`}
-                >
-                    {text}
-                </div>
+export function NavLink({
+    icon,
+    text,
+    path,
+    isActive,
+    isEnabled = true,
+}: NavLinkProps) {
+    const linkContent = (
+        <div className="flex flex-col items-center justify-start w-[70px] h-[34px]">
+            <div className={`${
+                isEnabled
+                    ? isActive
+                        ? 'text-active'
+                        : 'text-light'
+                    : 'text-inactive'
+            }`}>
+                {icon}
             </div>
-        </Link>
+            <div
+                className={`mx-auto text-navicon tracking-normal ${
+                    isEnabled
+                        ? isActive
+                            ? 'text-active'
+                            : 'text-light'
+                        : 'text-inactive'
+                }`}
+            >
+                {text}
+            </div>
+        </div>
+    );
+
+    return isEnabled ? (
+        <Link to={path}>{linkContent}</Link>
+    ) : (
+        <div>{linkContent}</div>
     );
 }
