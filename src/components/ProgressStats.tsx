@@ -1,10 +1,8 @@
-export function ProgressStats(){
+export function ProgressStats() {
     return (
-        <div className="flex flex-row w-full justify-between gap-64">
+        <div className="flex flex-row w-full justify-between">
             <div className="flex gap-0 items-center">
-                <p className="leading-6 text-base text-light">
-                    Cadet
-                </p>
+                <p className="leading-6 text-base text-light">Cadet</p>
                 <svg
                     width="16"
                     height="14"
@@ -30,5 +28,5 @@ export function ProgressStats(){
                 </p>
             </div>
         </div>
-    )
+    );
 }

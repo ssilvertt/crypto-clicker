@@ -5,8 +5,8 @@ import { ProfileHeader } from '../components/ProfileHeader.tsx';
 export function Farming() {
     return (
         <>
-            <div className="flex flex-col min-h-screen justify-between items-center pb-[110px] px-4 pt-4">
-                <div className="w-full">
+            <div className="flex flex-col min-h-screen justify-between items-center pb-[110px]">
+                <div className="mt-4">
                    <ProfileHeader/>
                    <CoinsInfo/>
                     

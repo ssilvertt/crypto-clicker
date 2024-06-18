@@ -1,0 +1,37 @@
+<svg width="176.000000" height="176.000000" viewBox="0 0 176 176" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<filter id="filter_51_1355_dd" x="0.000000" y="0.000000" width="176.000000" height="176.000000" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+			<feGaussianBlur stdDeviation="16" result="effect_layerBlur_1"/>
+		</filter>
+		<radialGradient gradientTransform="translate(88 88) rotate(90) scale(40 40)" cx="0.000000" cy="0.000000" r="1.000000" id="paint_radial_51_1355_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#FFFFFF"/>
+			<stop offset="0.700000" stop-color="#FEB700"/>
+			<stop offset="1.000000" stop-color="#6D4C00"/>
+		</radialGradient>
+		<linearGradient x1="88.000000" y1="48.000000" x2="88.000000" y2="128.000000" id="paint_linear_51_1352_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#FEB700"/>
+			<stop offset="1.000000" stop-color="#FEB700" stop-opacity="0.000000"/>
+		</linearGradient>
+		<radialGradient gradientTransform="translate(88 88) rotate(90) scale(40 40)" cx="0.000000" cy="0.000000" r="1.000000" id="paint_radial_51_1353_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#FFFFFF"/>
+			<stop offset="0.700000" stop-color="#FEB700"/>
+			<stop offset="1.000000" stop-color="#6D4C00"/>
+		</radialGradient>
+		<linearGradient x1="88.000000" y1="128.000000" x2="88.000000" y2="48.000000" id="paint_linear_51_1353_1" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#FEB700"/>
+			<stop offset="0.800000" stop-color="#FEB700" stop-opacity="0.000000"/>
+		</linearGradient>
+	</defs>
+	<g filter="url(#filter_51_1355_dd)">
+		<circle id="Ellipse 16" cx="88.000000" cy="88.000000" r="40.000000" fill="url(#paint_radial_51_1355_0)" fill-opacity="1.000000"/>
+	</g>
+	<circle id="Ellipse 15" cx="88.000000" cy="88.000000" r="40.500000" stroke="url(#paint_linear_51_1352_0)" stroke-opacity="1.000000" stroke-width="1.000000"/>
+	<circle id="Ellipse 14" cx="88.000000" cy="88.000000" r="40.000000" fill="url(#paint_radial_51_1353_0)" fill-opacity="1.000000"/>
+	<circle id="Ellipse 14" cx="88.000000" cy="88.000000" r="38.000000" stroke="url(#paint_linear_51_1353_1)" stroke-opacity="1.000000" stroke-width="4.000000"/>
+	<path id="$" d="M80.53 93.9C80.5 95.8 81 97.3 82.03 98.4C83.06 99.5 84.35 100.2 85.88 100.5L85.88 90.05C85.71 89.98 85.48 89.91 85.18 89.85C84.91 89.75 84.61 89.66 84.28 89.6C83.05 89.26 81.83 88.88 80.63 88.45C79.43 87.98 78.35 87.38 77.38 86.65C76.45 85.88 75.7 84.95 75.13 83.85C74.56 82.71 74.28 81.31 74.28 79.65C74.28 77.95 74.6 76.45 75.23 75.15C75.9 73.85 76.76 72.76 77.83 71.9C78.9 71 80.13 70.31 81.53 69.85C82.93 69.35 84.38 69.05 85.88 68.95L85.88 65.1L88.83 65.1L88.83 68.95C90.33 69.11 91.73 69.45 93.03 69.95C94.36 70.41 95.53 71.08 96.53 71.95C97.53 72.78 98.35 73.83 98.98 75.1C99.61 76.36 99.98 77.86 100.08 79.6L92.98 79.6C92.95 78.26 92.53 77.13 91.73 76.2C90.93 75.26 89.96 74.8 88.83 74.8L88.83 83.65C89.23 83.75 89.63 83.85 90.03 83.95C90.46 84.05 90.91 84.16 91.38 84.3C93.85 84.96 95.75 85.8 97.08 86.8C98.41 87.76 99.4 88.78 100.03 89.85C100.66 90.91 101.03 91.98 101.13 93.05C101.26 94.11 101.33 95.06 101.33 95.9C101.33 96.63 101.15 97.56 100.78 98.7C100.41 99.8 99.75 100.88 98.78 101.95C97.85 103.01 96.58 103.96 94.98 104.8C93.38 105.63 91.33 106.13 88.83 106.3L88.83 110.55L85.88 110.55L85.88 106.3C82.15 106.03 79.23 104.88 77.13 102.85C75.03 100.81 73.81 97.83 73.48 93.9L80.53 93.9ZM88.83 100.5C89.43 100.43 90.05 100.3 90.68 100.1C91.35 99.86 91.93 99.55 92.43 99.15C92.96 98.75 93.4 98.26 93.73 97.7C94.06 97.1 94.23 96.4 94.23 95.6C94.23 94.3 93.81 93.33 92.98 92.7C92.18 92.03 90.8 91.43 88.83 90.9L88.83 100.5ZM85.88 74.8C85.31 74.8 84.76 74.88 84.23 75.05C83.7 75.21 83.21 75.48 82.78 75.85C82.35 76.18 82 76.61 81.73 77.15C81.5 77.65 81.38 78.25 81.38 78.95C81.38 80.05 81.73 80.9 82.43 81.5C83.13 82.1 84.28 82.58 85.88 82.95L85.88 74.8Z" fill="#533A00" fill-opacity="1.000000" fill-rule="nonzero"/>
+</svg>

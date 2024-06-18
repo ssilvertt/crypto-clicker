@@ -68,12 +68,12 @@ export function DefaultLayout() {
         <WebAppProvider>
             <MobileView>
                 <div className="bg-black">
-                    <div className="min-h-screen bg flex flex-col font-helvetica justify-between items-center ">
-                        <div className="flex-grow">
+                    <div className="min-h-screen bg flex flex-col font-helvetica ">
+                        <div className="flex-grow px-4">
                             <Outlet />
                         </div>
 
-                        <nav className="fixed bottom-4 left-2 right-2 flex flex-row justify-between items-center py-3 px-4 box-border rounded-[48px] bg-nav">
+                        <nav className="fixed bottom-4 left-4 right-4 flex flex-row justify-between items-center py-3 px-4 box-border rounded-[48px] bg-nav">
                             {links.map((link) => (
                                 <NavLink
                                     key={link.path}
