@@ -18,8 +18,8 @@ export function Friends() {
                     icon="/userIcon.svg"
                     coinAmount={5000}
                 />
-                <div className="rounded-[16px] p-px w-full bg-gradient-to-t from-[#ffdb7e] to-transparent to-100%">
-                    <div className="rounded-[16px] px-4 py-3 flex gap-4 items-center relative w-full bg-[#feb700]">
+                <div className="rounded-[16px] p-[2px] w-full bg-gradient-to-t from-[#ffdb7e] to-transparent to-100%">
+                    <div className="rounded-[15px] px-4 py-3 flex gap-4 items-center relative w-full bg-[#feb700]">
                         <img src="/yellowUserIcon.svg" alt="user" />
                         <div className="flex flex-col items-start flex-1 relative w-full">
                             <p className="font-bold leading-6 text-base text-[#533a00]">

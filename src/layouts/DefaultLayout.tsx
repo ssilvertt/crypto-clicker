@@ -73,19 +73,22 @@ export function DefaultLayout() {
                         <div className="flex-grow px-4">
                             <Outlet />
                         </div>
-
-                        <nav className="fixed bottom-4 left-4 right-4 flex flex-row justify-between items-center py-3 px-4 box-border rounded-[48px] bg-nav">
-                            {links.map((link) => (
-                                <NavLink
-                                    key={link.path}
-                                    icon={link.icon}
-                                    text={link.text}
-                                    path={link.path}
-                                    isActive={location.pathname === link.path}
-                                    isEnabled={link.isEnabled}
-                                />
-                            ))}
-                        </nav>
+                        <div>
+                            <nav className="fixed bottom-4 left-4 right-4 flex flex-row justify-between items-center py-3 px-4 box-border rounded-[48px] bg-nav">
+                                {links.map((link) => (
+                                    <NavLink
+                                        key={link.path}
+                                        icon={link.icon}
+                                        text={link.text}
+                                        path={link.path}
+                                        isActive={
+                                            location.pathname === link.path
+                                        }
+                                        isEnabled={link.isEnabled}
+                                    />
+                                ))}
+                            </nav>
+                        </div>
                     </div>
                 </div>
             </MobileView>

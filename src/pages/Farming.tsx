@@ -10,7 +10,7 @@ export function Farming() {
                    <ProfileHeader/>
                    <CoinsInfo/>
                     
-                    <img src="/Frame%2032.svg" alt="rocket" className="mt-6" />
+                    <img src="/Frame%2032.svg" alt="rocket" className="mt-6 w-full h-[40vh]" />
                 </div>
                 
                 <div className="flex flex-row justify-between items-start w-full">
