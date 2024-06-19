@@ -11,6 +11,7 @@ import { DailyQIcon } from '../components/NavIcons/DailyQIcon.tsx';
 import { PlanetIcon } from '../components/NavIcons/PlanetIcon.tsx';
 import { UsersIcon } from '../components/NavIcons/UsersIcon.tsx';
 import { NavLink } from '../components/NavLink.tsx';
+import { BrowserPage } from '../pages/BrowserPage.tsx';
 import { useUserStore } from '../store/user-store.ts';
 import { MobileView, BrowserView } from 'react-device-detect';
 
@@ -30,6 +31,7 @@ const links = [
         icon: <CoinIcon color="text-light" />,
         text: 'Earn',
         path: '/earn',
+        isEnabled: false,
     },
     {
         icon: <AxeIcon color="text-light" />,
@@ -93,7 +95,14 @@ export function DefaultLayout() {
                 </div>
             </MobileView>
             <BrowserView>
-                <div>Error, please use mobile device</div>
+                <div className="bg-black">
+                    <div className="min-h-screen bg flex flex-col font-helvetica ">
+                        <div className="flex-grow px-4">
+                            <BrowserPage/>
+                        </div>
+                       
+                    </div>
+                </div>
             </BrowserView>
         </WebAppProvider>
     );
