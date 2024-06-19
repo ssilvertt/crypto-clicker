@@ -13,8 +13,6 @@
 
 
 body{
-	border-top: 2px solid rgb(69, 8, 223);
-	border-radius: 32px 32px 0 0;
 	background: linear-gradient(180deg, rgb(15, 13, 62), rgb(19, 14, 36) 14.96%, rgb(0, 0, 0) 100%);
 	overflow: hidden; /* Add this line */
 }
