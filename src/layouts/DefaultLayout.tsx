@@ -97,7 +97,7 @@ export function DefaultLayout() {
             <BrowserView>
                 <div className="bg-black">
                     <div className="min-h-screen bg flex flex-col font-helvetica ">
-                        <div className="flex-grow px-4">
+                        <div className="flex-grow">
                             <BrowserPage/>
                         </div>
                        

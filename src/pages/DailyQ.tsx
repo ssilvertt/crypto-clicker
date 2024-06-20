@@ -2,7 +2,7 @@ import { RewardCard } from '../components/RewardCard.tsx';
 
 export function DailyQ() {
     return (
-        <div className="flex flex-col space-y-4 items-center justify-start w-full px-4">
+        <div className="flex flex-col space-y-4 items-center justify-start w-full">
             <div className="relative mt-8">
                 <img src="/coin.svg" className="h-20 w-20" alt="coin" />
             </div>

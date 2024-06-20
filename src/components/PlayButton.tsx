@@ -32,9 +32,9 @@ export function PlayButton() {
             transition={{ type: 'spring', stiffness: 400, damping: 17 }}
         >
             <img
-                src={'/buttons.svg'}
+                src={'/Frame%2032.svg'}
                 alt={'button'}
-                className="w-[168px] h-[160px]"
+                className="mt-6 w-full h-[40vh]"
             />
         </motion.div>
         

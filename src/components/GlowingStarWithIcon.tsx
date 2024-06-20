@@ -1,6 +1,14 @@
-const GlowingStarWithIcon = () => {
+import { cn } from '../utils/utils.ts';
+
+interface GlowingStarWithIconProps {
+    className?: string;
+    style?: React.CSSProperties;
+    ellipseRadius?: string;
+}
+
+const GlowingStarWithIcon = ({ className, style, ellipseRadius = '10' }: GlowingStarWithIconProps) => {
     return (
-        <div className="relative h-6 w-6 flex items-center justify-center">
+        <div className={cn('relative flex items-center justify-center', className)} style={style}>
             <svg
                 width="52"
                 height="52"
@@ -13,7 +21,7 @@ const GlowingStarWithIcon = () => {
                     <circle
                         cx="26"
                         cy="26"
-                        r="10"
+                        r={ellipseRadius}
                         fill="url(#paint0_linear_18_684)"
                     />
                 </g>
@@ -52,7 +60,7 @@ const GlowingStarWithIcon = () => {
                     </linearGradient>
                 </defs>
             </svg>
-            <img src="/Star%2015.svg" alt="coin" className="relative h-5 w-5" />
+            <img src="/Star%2015.svg" alt="coin" className={cn('relative', className)} />
         </div>
     );
 };
