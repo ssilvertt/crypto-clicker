@@ -46,7 +46,7 @@ export function DailyQ() {
                         icon="/messageIcon.svg"
                         coinAmount={10000}
                     />
-                  <div className='pb-20'>
+                  <div className='pb-16'>
                     <RewardCard
                       title="Subscribe to us on Twitter"
                       icon="/twitterIcon.svg"
