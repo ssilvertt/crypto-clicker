@@ -32,7 +32,7 @@ export function PlayButton() {
             transition={{ type: 'spring', stiffness: 400, damping: 17 }}
         >
             <img
-                src={'/Frame%2032.svg'}
+                src={'/rocketButton.png'}
                 alt={'button'}
                 className="mt-6 w-full h-[40vh]"
             />
