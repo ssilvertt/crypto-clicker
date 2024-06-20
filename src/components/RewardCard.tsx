@@ -17,7 +17,7 @@ export function RewardCard({ title, icon, text, coinAmount }: RewardCardProps) {
                     <div className="flex gap-1 justify-center items-center relative">
                         <img src="/coin.svg" alt="coin" />
                         <p className="text-center leading-6 text-base text-light">
-                            {coinAmount ? `+ ${coinAmount} coins` : text}
+                            {coinAmount ? `+ ${(coinAmount).toLocaleString('ru-RU')} coins` : text}
                         </p>
                     </div>
                 </div>
