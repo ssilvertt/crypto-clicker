@@ -75,20 +75,22 @@ export function DefaultLayout() {
                         <div className="flex-grow px-4">
                             <Outlet />
                         </div>
-                        <div className='h-[11vh]'>
-                            <nav className="fixed bottom-4 left-4 right-4 flex flex-row justify-between items-center py-3 px-4 box-border rounded-[48px] bg-nav ">
-                                {links.map((link) => (
-                                    <NavLink
+                        <div className="h-[11vh]">
+                            <nav
+                              className="fixed bottom-4 left-4 right-4 rounded-[48px] p-[2px] bg-gradient-to-t from-[#4508df] to-transparent">
+                                <div
+                                  className="flex flex-row justify-between items-center py-3 px-4 box-border rounded-[48px] bg-nav">
+                                    {links.map((link) => (
+                                      <NavLink
                                         key={link.path}
                                         icon={link.icon}
                                         text={link.text}
                                         path={link.path}
-                                        isActive={
-                                            location.pathname === link.path
-                                        }
+                                        isActive={location.pathname === link.path}
                                         isEnabled={link.isEnabled}
-                                    />
-                                ))}
+                                      />
+                                    ))}
+                                </div>
                             </nav>
                         </div>
                     </div>
@@ -98,9 +100,8 @@ export function DefaultLayout() {
                 <div className="bg-black">
                     <div className="min-h-screen bg flex flex-col font-helvetica ">
                         <div className="flex-grow">
-                            <BrowserPage/>
+                            <BrowserPage />
                         </div>
-                       
                     </div>
                 </div>
             </BrowserView>

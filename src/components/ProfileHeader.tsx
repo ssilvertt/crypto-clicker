@@ -1,4 +1,9 @@
+import useUserStore from '../store/user-store.ts'
+
 export function ProfileHeader() {
+    const {user} = useUserStore();
+    
+    
     return (
         <div className="flex flex-row justify-between items-start">
             <div className="flex flex-row justify-between items-center w-full">
@@ -12,7 +17,7 @@ export function ProfileHeader() {
                     </div>
                     <div className="flex flex-col gap-0 justify-center items-start relative">
                         <p className="text-center leading-6 text-base text-light">
-                            Alex Johnson
+                            {user?.first_name} {user?.last_name}
                         </p>
                         <small className="opacity-40 text-center leading-3 text-xs text-light">
                             Pilot
