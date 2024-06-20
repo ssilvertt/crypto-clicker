@@ -46,16 +46,17 @@ export function DailyQ() {
                         icon="/messageIcon.svg"
                         coinAmount={10000}
                     />
+                  <div className='pb-20'>
                     <RewardCard
-                        title="Subscribe to us on Twitter"
-                        icon="/twitterIcon.svg"
-                        coinAmount={15000}
+                      title="Subscribe to us on Twitter"
+                      icon="/twitterIcon.svg"
+                      coinAmount={15000}
                     />
-                </div>
-                <div
-                    className="absolute inset-0 bg-gradient-to-b from-transparent from-60% to-black pointer-events-none"></div>
+                  </div>
+                  </div>
+            
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent from-60% to-black pointer-events-none"></div>
             </div>
-        
         </div>
     );
 }
