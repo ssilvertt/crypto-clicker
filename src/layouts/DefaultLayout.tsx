@@ -2,6 +2,7 @@ import {
     WebAppProvider,
     useInitData,
     useExpand,
+  useWebApp,
 } from '@vkruglikov/react-telegram-web-app';
 import { useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
@@ -51,8 +52,11 @@ export function DefaultLayout() {
     const [, initData] = useInitData();
     const [isExpanded, expand] = useExpand();
     const { setUser } = useUserStore();
+    const WebApp = useWebApp();
+    
 
     useEffect(() => {
+        console.log(WebApp);
         if (!isExpanded) {
             expand();
         }
