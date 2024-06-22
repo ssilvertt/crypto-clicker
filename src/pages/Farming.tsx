@@ -8,11 +8,15 @@ export function Farming() {
     return (
         <>
             <div className="flex flex-col justify-between items-center min-h-[89vh] pb-3">
-                <div className="mt-4 flex-grow">
-                    <ProfileHeader />
-                    <CoinsInfo />
+                <div className="mt-4 flex-grow w-full">
+                    
+                        <ProfileHeader />
+                        <CoinsInfo />
+                   
+                 
                     <PlayButton />
                 </div>
+                
                 <div className="flex flex-row justify-between items-start w-full mt-auto">
                     <div className=" rounded-[46px] p-[2px] bg-gradient-to-t from-[#4508df] to-transparent bg-[#4508df]/[0.32]">
                         <div className="rounded-[46px] bg-[#18044c] flex items-center py-2 px-4 gap-1 box-border">

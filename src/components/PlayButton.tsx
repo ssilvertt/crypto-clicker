@@ -34,7 +34,7 @@ export function PlayButton() {
             <img
                 src={'/rocketButton.png'}
                 alt={'button'}
-                className="mt-6 w-full h-[40vh]"
+                    className="mt-6 h-[40vh] w-[68wv] mx-auto"
             />
         </motion.div>
         

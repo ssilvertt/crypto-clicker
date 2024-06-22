@@ -17,7 +17,7 @@ export function NavLink({
     isEnabled = true,
 }: NavLinkProps) {
     const linkContent = (
-        <div className="flex flex-col items-center justify-start w-[70px] h-[34px]">
+        <div className="flex flex-col items-center justify-start w-[16.91vw] h-[34px]">
             <div className={`${
                 isEnabled
                     ? isActive

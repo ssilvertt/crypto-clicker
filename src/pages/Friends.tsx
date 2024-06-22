@@ -3,7 +3,7 @@ import copy from '../copy.svg';
 
 export function Friends() {
     return (
-        <div className="">
+        <div className="h-[89vh] overflow-y-auto no-scrollbar">
             <div className="flex flex-col gap-2 items-center relative w-full">
                 <h1 className="text-center font-bold leading-10 text-[40px] text-light mt-8">
                     Invite your friends

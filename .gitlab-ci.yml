@@ -1,0 +1,21 @@
+image: dabbpro/node-builder
+
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  script:
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+    - ssh-keyscan -H restai.me >> ~/.ssh/known_hosts
+
+    - ssh restai@restai.me "cd /var/www/click2earn/ && git fetch -p && git reset --hard origin/master && pnpm i && pnpm build"
+    - ssh restai@restai.me "sudo systemctl restart nginx"
+  only:
+    refs:
+      - master
+  except:
+    - tags
+  environment:
+    name: restai.me

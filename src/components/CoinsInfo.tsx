@@ -8,7 +8,7 @@ export function CoinsInfo() {
     
     return (
         <div className="flex flex-col justify-start items-center mt-4 w-full">
-            <div className="flex flex-row justify-center items-start gap-1">
+            <div className="flex flex-row justify-around items-start w-full">
                 <Card title="Earning per Click" value="+1" />
                 <Card title="Coins to Level Up" value="50K" coinIcon />
                 <Card title="Coins for House" value="100K" coinIcon />
