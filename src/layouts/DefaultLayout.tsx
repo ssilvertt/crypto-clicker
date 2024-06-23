@@ -1,10 +1,11 @@
 import {
-    WebAppProvider,
-    useInitData,
-    useExpand,
     useCloudStorage,
+    useExpand,
+    useInitData,
+    WebAppProvider,
 } from '@vkruglikov/react-telegram-web-app';
 import { useEffect } from 'react';
+import { BrowserView, MobileView } from 'react-device-detect';
 import { Outlet, useLocation } from 'react-router-dom';
 import { AxeIcon } from '../components/NavIcons/AxeIcon.tsx';
 import { CoinIcon } from '../components/NavIcons/CoinIcon.tsx';
@@ -14,7 +15,6 @@ import { UsersIcon } from '../components/NavIcons/UsersIcon.tsx';
 import { NavLink } from '../components/NavLink.tsx';
 import { BrowserPage } from '../pages/BrowserPage.tsx';
 import { useUserStore } from '../store/user-store.ts';
-import { MobileView, BrowserView } from 'react-device-detect';
 
 const links = [
     {
@@ -52,14 +52,18 @@ export function DefaultLayout() {
     const [, initData] = useInitData();
     const [isExpanded, expand] = useExpand();
     const { setUser } = useUserStore();
-    const {getItem, setItem} = useCloudStorage()
+    const { getItem, setItem } = useCloudStorage();
+
+    const getToken = async () => {
+        return await getItem('token');
+    };
 
     useEffect(() => {
         if (!isExpanded) {
             expand();
         }
         setItem('token', 'xdxdxd');
-        const token = getItem('token');
+        const token = getToken();
         console.log(token);
     }, [expand, isExpanded]);
 
