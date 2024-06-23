@@ -53,19 +53,28 @@ export function DefaultLayout() {
     const [isExpanded, expand] = useExpand();
     const { setUser } = useUserStore();
     const { getItem, setItem } = useCloudStorage();
-
+    
     const getToken = async () => {
         return await getItem('token');
     };
-
+    
     useEffect(() => {
         if (!isExpanded) {
             expand();
         }
-        setItem('token', 'xdxdxd');
-        const token = getToken();
-        console.log(token);
-    }, [expand, isExpanded]);
+        
+        const fetchToken = async () => {
+            try {
+                await setItem('token', 'xdxdxd');
+                const token = await getToken();
+                console.log('Полученный токен:', token);
+            } catch (error) {
+                console.error('Ошибка при работе с токеном:', error);
+            }
+        };
+        
+        fetchToken();
+    }, [expand, isExpanded, getItem, setItem]);
 
     useEffect(() => {
         if (initData) {
