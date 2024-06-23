@@ -51,39 +51,39 @@ export function DefaultLayout() {
     const location = useLocation();
     const [, initData] = useInitData();
     const [isExpanded, expand] = useExpand();
-    const { setUser } = useUserStore();
+    const { setUser, user } = useUserStore();
     const { getItem, setItem } = useCloudStorage();
-    
-    const getToken = async () => {
-        return await getItem('token');
+
+    const getUser = async () => {
+        return await getItem('user');
     };
-    
+
     useEffect(() => {
         if (!isExpanded) {
             expand();
         }
-        
-        const fetchToken = async () => {
+    }, [expand, isExpanded]);
+
+    useEffect(() => {
+        const fetchUser = async () => {
             try {
-                await setItem('token', 'xdxdxd');
-                const token = await getToken();
-                console.log('Полученный токен:', token);
+                if (user) {
+                    await setItem('userInfo', JSON.stringify(user));
+                    const gotUser = await getUser();
+                    console.log('Полученный user:', gotUser);
+                }
             } catch (error) {
                 console.error('Ошибка при работе с токеном:', error);
             }
         };
-        
-        fetchToken();
-    }, [expand, isExpanded, getItem, setItem]);
-
-    useEffect(() => {
         if (initData) {
             const searchParams = new URLSearchParams(initData);
             const value = searchParams.get('user');
             const user = value !== null ? JSON.parse(value) : null;
             setUser(user);
+            fetchUser();
         }
-    }, [initData, setUser]);
+    }, [getUser, initData, setItem, setUser, user]);
 
     return (
         <WebAppProvider>
