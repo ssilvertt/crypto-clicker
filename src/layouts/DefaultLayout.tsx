@@ -2,6 +2,7 @@ import {
     WebAppProvider,
     useInitData,
     useExpand,
+    useCloudStorage,
 } from '@vkruglikov/react-telegram-web-app';
 import { useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
@@ -51,11 +52,15 @@ export function DefaultLayout() {
     const [, initData] = useInitData();
     const [isExpanded, expand] = useExpand();
     const { setUser } = useUserStore();
+    const {getItem, setItem} = useCloudStorage()
 
     useEffect(() => {
         if (!isExpanded) {
             expand();
         }
+        setItem('token', 'xdxdxd');
+        const token = getItem('token');
+        console.log(token);
     }, [expand, isExpanded]);
 
     useEffect(() => {
