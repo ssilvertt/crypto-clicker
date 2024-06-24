@@ -6,3 +6,11 @@ export interface User {
     language_code: string;
     allows_write_to_pm: boolean;
 }
+
+export interface UserLogin {
+    telegramId: string;
+    firstName: string;
+    lastName?: string;
+    username?: string;
+    referral?: string
+}
