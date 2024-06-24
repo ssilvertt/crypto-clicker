@@ -1,43 +1,77 @@
+import { AnimatePresence, motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { useClickerStore } from '@/store/clicker-store.ts';
+import PlanetSvg from '@svg/planet.svg?react';
+import StarSVG from '@svg/star.svg?react';
+import { cn, getRandomPercent } from '@/utils/utils.ts';
+import { STARS_DURATION, STARS_MAX, STARS_MIN } from '@/shared/consts/stars-config.ts';
+import { uniqueId } from 'lodash-es';
 
-import { motion } from 'framer-motion';
-import { TouchEvent, useState } from 'react';
-import { useClickerStore } from '../store/clicker-store.ts';
+interface Props {
+    className?: string;
+}
 
-export function PlayButton() {
+interface Star {
+    id: string
+    top: string;
+    left: string;
+}
+
+export const PlayButton: React.FC<Props> = ({ className }) => {
     const { increment } = useClickerStore();
-    const [clickCount, setClickCount] = useState(0);
-    
-    
 
-    const handleTouchStart = (event: TouchEvent) => {
-        if (event.touches.length === 1) {
-            setClickCount((prevCount) => prevCount + 1);
+    const [stars, setStars] = useState<Star[]>([]);
+
+    const onTouchEnd = () => {
+        increment();
+
+        if (stars.length < STARS_MIN) {
+            for (let count = stars.length; count < STARS_MIN; count++) {
+                addStar();
+            }
+        } else if (stars.length < STARS_MAX) {
+            addStar();
         }
-    };
+    }
 
-    const handleTouchEnd = () => {
-        increment(clickCount);
-        setClickCount(0);
-    };
+    const addStar = () => {
+        const newStar: Star = {
+            id: uniqueId('star-'),
+            top: getRandomPercent(-5, 80),
+            left: getRandomPercent(-5, 80),
+        };
+
+        setStars(stars => [...stars, newStar]);
+        setTimeout(() => setStars(stars => stars.filter(star => star.id !== newStar.id)), STARS_DURATION)
+    }
 
     return (
-        <>
-       
-        <motion.div
-            className=" mx-auto rounded-full relative mt-4"
-            onTouchStart={handleTouchStart}
-            onTouchEnd={handleTouchEnd}
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.9 }}
-            transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-        >
-            <img
-                src={'/rocketButton.png'}
-                alt={'button'}
-                    className="mt-6 h-[40vh] w-[68wv] mx-auto"
-            />
-        </motion.div>
-        
-        </>
+        <div className={cn(className, 'relative flex justify-center items-center')}>
+            <PlanetSvg className="w-10/12" />
+
+            <AnimatePresence>
+                {stars.map((star) => (
+                    <motion.div
+                        key={star.id}
+                        className="absolute w-3/12 p-3"
+                        style={star}
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        exit={{ scale: 0 }}
+                    >
+                        <StarSVG />
+                    </motion.div>
+                ))}
+            </AnimatePresence>
+
+            <motion.button className="absolute w-8/12 flex justify-center items-center rounded-3xl"
+                           onTouchEnd={onTouchEnd}
+                           whileTap={{ scale: 1.15 }}>
+                <img className="w-10/12"
+                     src="rocket.png"
+                     alt="rocket"
+                     onContextMenu={event => event.preventDefault()} />
+            </motion.button>
+        </div>
     );
-}
+};

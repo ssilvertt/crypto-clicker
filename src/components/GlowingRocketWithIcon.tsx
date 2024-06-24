@@ -60,7 +60,7 @@ const GlowingRockerWithIcon = ({ className, style, ellipseRadius = '10' }: Glowi
 					</linearGradient>
 				</defs>
 			</svg>
-			<img src="/rocket.svg" alt="coin" className={cn('relative', className)} />
+			<img src="/yellow-rocket.svg" alt="coin" className={cn('relative', className)} />
 		</div>
 	);
 };

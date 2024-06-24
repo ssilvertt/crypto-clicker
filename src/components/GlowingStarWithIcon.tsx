@@ -60,7 +60,7 @@ const GlowingStarWithIcon = ({ className, style, ellipseRadius = '10' }: Glowing
                     </linearGradient>
                 </defs>
             </svg>
-            <img src="/Star%2015.svg" alt="coin" className={cn('relative', className)} />
+            <img src="/star-15.svg" alt="coin" className={cn('relative', className)} />
         </div>
     );
 };

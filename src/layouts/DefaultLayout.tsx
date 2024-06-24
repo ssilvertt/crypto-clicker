@@ -51,7 +51,6 @@ export function DefaultLayout() {
     const [, initData] = useInitData();
     const [isExpanded, expand] = useExpand();
     const { setUser } = useUserStore();
-    
 
     useEffect(() => {
         if (!isExpanded) {
