@@ -4,6 +4,9 @@ import { useInitData } from '@vkruglikov/react-telegram-web-app';
 import { useUserStore } from '../store/user-store.ts';
 import axios from 'axios';
 
+axios.defaults.withCredentials = true;
+axios.defaults.withCredentials = true;
+
 export const useInitUser = () => {
 	const [, initData] = useInitData();
 	const { setUser } = useUserStore();
@@ -18,10 +21,11 @@ export const useInitUser = () => {
 					telegramId: user.id,
 					firstName: user.first_name,
 					lastName: user.last_name,
+					username: user.username,
 					referral: '',
 				}
 				try {
-					const response = await axios.post('https://bruh.restai.me/api/v1/login', sentUser);
+					const response = await axios.post('https://bruh.restai.me/api/v1/login', JSON.stringify(sentUser));
 					console.log(response);
 					setUser(user);
 				} catch (error) {
